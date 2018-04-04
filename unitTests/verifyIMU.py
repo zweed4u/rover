@@ -17,7 +17,7 @@ import struct
 # slv_reg3    -- wy
 # slv_reg3    -- wz
 
-os.system('cat firmware/system.bin > /dev/xdevcfg')
+os.system('cat ../firmware/system.bin > /dev/xdevcfg')
 
 # open dev mem and see to base address
 f = open("/dev/mem", "r+b")

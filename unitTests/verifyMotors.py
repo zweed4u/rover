@@ -15,7 +15,7 @@ import struct
 # pwm_period            <= slv_reg3(26 downto 0);
 # slv_reg4              <= encoder_blips;
 
-os.system('cat firmware/system.bin > /dev/xdevcfg')
+os.system('cat ../firmware/system.bin > /dev/xdevcfg')
 
 # open dev mem and see to base address
 f1 = open("/dev/mem", "r+b")

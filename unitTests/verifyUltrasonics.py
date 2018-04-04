@@ -12,7 +12,7 @@ import struct
 # slv_reg2    -- ultrasonic2
 # slv_reg3    -- ultrasonic3
 
-os.system('cat firmware/system.bin > /dev/xdevcfg')
+os.system('cat ../firmware/system.bin > /dev/xdevcfg')
 
 # open dev mem and see to base address
 f = open("/dev/mem", "r+b")
