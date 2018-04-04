@@ -1,6 +1,8 @@
+#!/usr/bin/python
 # Dr. Kaputa
 # Ultrasonic test code for ESD II
 
+import os
 import time
 import mmap
 import struct
@@ -9,6 +11,8 @@ import struct
 # slv_reg1    -- ultrasonic1
 # slv_reg2    -- ultrasonic2
 # slv_reg3    -- ultrasonic3
+
+os.system('cat firmware/system.bin > /dev/xdevcfg')
 
 # open dev mem and see to base address
 f = open("/dev/mem", "r+b")

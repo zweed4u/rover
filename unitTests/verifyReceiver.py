@@ -1,9 +1,13 @@
+#!/usr/bin/python
 # Dr. Kaputa
 # Receiver test code for ESD II
 
+import os
 import time
 import mmap
 import struct
+
+os.system('cat firmware/system.bin > /dev/xdevcfg')
 
 # open dev mem and see to base address
 f = open("/dev/mem", "r+b")

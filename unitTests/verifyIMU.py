@@ -1,6 +1,8 @@
+#!/usr/bin/python
 # Dr. Kaputa
 # IMU test code for ESD II
 
+import os
 import time
 import mmap
 import struct
@@ -14,6 +16,8 @@ import struct
 # slv_reg3    -- wx
 # slv_reg3    -- wy
 # slv_reg3    -- wz
+
+os.system('cat firmware/system.bin > /dev/xdevcfg')
 
 # open dev mem and see to base address
 f = open("/dev/mem", "r+b")

@@ -1,6 +1,8 @@
+#!/usr/bin/python
 # Dr. Kaputa
 # Remote control of rover via reciever
 
+import os
 import time
 import mmap
 import struct
@@ -10,6 +12,8 @@ import struct
 # pwm_duty              <= slv_reg2(26 downto 0);
 # pwm_period            <= slv_reg3(26 downto 0);
 # slv_reg4              <= encoder_blips;
+
+os.system('cat firmware/system.bin > /dev/xdevcfg')
 
 # open dev mem and see to base address
 f1 = open("/dev/mem", "r+b")
