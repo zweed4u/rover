@@ -218,7 +218,9 @@ class Motor:
         enable(self.motor4_mem)
 
         # NEED TO DETERMINE WHEN TO STOP - IMU
-        # NEED TO PREVENT LATCHING
+        # PREVENT LATCHING
+        prevent_latch(self.motor1_mem)
+        prevent_latch(self.motor2_mem)
 
 
     def maze_right(self):
@@ -233,8 +235,10 @@ class Motor:
         enable(self.motor3_mem)
         enable(self.motor4_mem)
 
-        # NEED TO DETERMING WHEN TO STOP - IMU
-        # NEED TO PREVENT LATCHING
+        # NEED TO DETERMINE WHEN TO STOP - IMU
+        # PREVENT LATCHING
+        prevent_latch(self.motor3_mem)
+        prevent_latch(self.motor4_mem)
 
 
 class Ultrasonic:
