@@ -22,67 +22,139 @@ f1 = open("/dev/mem", "r+b")
 f2 = open("/dev/mem", "r+b")
 f3 = open("/dev/mem", "r+b")
 f4 = open("/dev/mem", "r+b")
+
 mem1 = mmap.mmap(f1.fileno(), 32, offset=0x40001000)
 mem2 = mmap.mmap(f2.fileno(), 32, offset=0x40002000)
 mem3 = mmap.mmap(f3.fileno(), 32, offset=0x40003000)
 mem4 = mmap.mmap(f4.fileno(), 32, offset=0x40004000)
 
-# motor 1
-mem1.seek(4) 
-mem1.write(struct.pack('l', 0))   
-mem1.seek(8) 
-mem1.write(struct.pack('l', 25000))
-mem1.seek(12) 
-mem1.write(struct.pack('l', 50000))
-mem1.seek(0) 
-mem1.write(struct.pack('l', 1))
-time.sleep(2)
-mem1.seek(0)
-mem1.write(struct.pack('l', 0))
 
-# motor 2
-mem2.seek(4) 
-mem2.write(struct.pack('l', 0))
-mem2.seek(8) 
-mem2.write(struct.pack('l', 25000))
-mem2.seek(12) 
-mem2.write(struct.pack('l', 50000))
-mem2.seek(0) 
-mem2.write(struct.pack('l', 1))
-time.sleep(2)
-mem2.seek(0)
-mem2.write(struct.pack('l', 0))
+def prep_move(wheel_mem, duty, period, direction):
+	wheel_mem.seek(4) 
+	wheel_mem.write(struct.pack('l', direction))   
+	wheel_mem.seek(8) 
+	wheel_mem.write(struct.pack('l', duty))
+	wheel_mem.seek(12) 
+	wheel_mem.write(struct.pack('l', period))
 
-# motor 3
-mem3.seek(4) 
-mem3.write(struct.pack('l', 0))
-mem3.seek(8) 
-mem3.write(struct.pack('l', 25000))
-mem3.seek(12) 
-mem3.write(struct.pack('l', 50000))
-mem3.seek(0) 
-mem3.write(struct.pack('l', 1))
-time.sleep(2)
-mem3.seek(0)
-mem3.write(struct.pack('l', 0))
 
-# motor 4
-mem4.seek(4) 
-mem4.write(struct.pack('l', 0))
-mem4.seek(8) 
-mem4.write(struct.pack('l', 25000))
-mem4.seek(12) 
-mem4.write(struct.pack('l', 50000))
-mem4.seek(0) 
-mem4.write(struct.pack('l', 1))
-time.sleep(2)
-mem4.seek(0)
-mem4.write(struct.pack('l', 0))
+def enable(wheel_mem):
+	wheel_mem.seek(0) 
+	wheel_mem.write(struct.pack('l', 1))
+
+
+def disable(wheel_mem):
+	wheel_mem.seek(0) 
+	wheel_mem.write(struct.pack('l', 0))
+
+
+def turn_right():
+	prep_move(mem1, 25000, 50000, 0)
+	prep_move(mem2, 25000, 50000, 0)
+	prep_move(mem3, 25000, 50000, 1)
+	prep_move(mem4, 25000, 50000, 1)
+
+	enable(mem1)
+	enable(mem2)
+	enable(mem3)
+	enable(mem4)
+
+	# Movement for 2 seconds
+	time.sleep(2)
+
+	# Prevent latch by setting backward moving motors forward
+	mem3.seek(4) 
+	mem3.write(struct.pack('l', 0)) 
+	mem4.seek(4) 
+	mem4.write(struct.pack('l', 0)) 
+
+	disable(mem1)
+	disable(mem2)
+	disable(mem3)
+	disable(mem4)
+
+
+def turn_left():
+	prep_move(mem1, 25000, 50000, 1)
+	prep_move(mem2, 25000, 50000, 1)
+	prep_move(mem3, 25000, 50000, 0)
+	prep_move(mem4, 25000, 50000, 0)
+
+	enable(mem1)
+	enable(mem2)
+	enable(mem3)
+	enable(mem4)
+
+	# Movement for 2 seconds
+	time.sleep(2)
+
+	# Prevent latch by setting backward moving motors forward
+	mem1.seek(4) 
+	mem1.write(struct.pack('l', 0)) 
+	mem2.seek(4) 
+	mem2.write(struct.pack('l', 0)) 
+
+	disable(mem1)
+	disable(mem2)
+	disable(mem3)
+	disable(mem4)
+
+
+def forward():
+	prep_move(mem1, 25000, 50000, 0)
+	prep_move(mem2, 25000, 50000, 0)
+	prep_move(mem3, 25000, 50000, 0)
+	prep_move(mem4, 25000, 50000, 0)
+
+	enable(mem1)
+	enable(mem2)
+	enable(mem3)
+	enable(mem4)
+
+	# Movement for 2 seconds
+	time.sleep(2)
+
+	disable(mem1)
+	disable(mem2)
+	disable(mem3)
+	disable(mem4)
+
+
+def backward():
+	prep_move(mem1, 25000, 50000, 1)
+	prep_move(mem2, 25000, 50000, 1)
+	prep_move(mem3, 25000, 50000, 1)
+	prep_move(mem4, 25000, 50000, 1)
+
+	enable(mem1)
+	enable(mem2)
+	enable(mem3)
+	enable(mem4)
+
+	# Movement for 2 seconds
+	time.sleep(2)
+
+	# Prevent latch by setting backward moving motors forward
+	mem1.seek(4) 
+	mem1.write(struct.pack('l', 0)) 
+	mem2.seek(4) 
+	mem2.write(struct.pack('l', 0)) 
+	mem3.seek(4) 
+	mem3.write(struct.pack('l', 0)) 
+	mem4.seek(4) 
+	mem4.write(struct.pack('l', 0)) 
+
+	disable(mem1)
+	disable(mem2)
+	disable(mem3)
+	disable(mem4)
+
 
 mem1.close()
 mem2.close()
 mem3.close()
 mem4.close()
+
 f1.close()
 f2.close()
 f3.close()
