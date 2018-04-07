@@ -20,8 +20,8 @@ import struct
 # slv_reg1    -- y accel
 # slv_reg2    -- z accel
 # slv_reg3    -- wx
-# slv_reg3    -- wy
-# slv_reg3    -- wz
+# slv_reg4    -- wy
+# slv_reg5    -- wz
 
 # mem6
 # slv_reg0    -- sync     [bit 0]    -- 0
@@ -87,109 +87,109 @@ class Motor:
 
 
     def turn_right(self):
-        prep_move(self.motor1_mem, 25000, 50000, 0)
-        prep_move(self.motor2_mem, 25000, 50000, 0)
-        prep_move(self.motor3_mem, 25000, 50000, 1)
-        prep_move(self.motor4_mem, 25000, 50000, 1)
+        self.prep_move(self.motor1_mem, 25000, 50000, 0)
+        self.prep_move(self.motor2_mem, 25000, 50000, 0)
+        self.prep_move(self.motor3_mem, 25000, 50000, 1)
+        self.prep_move(self.motor4_mem, 25000, 50000, 1)
 
-        enable(self.motor1_mem)
-        enable(self.motor2_mem)
-        enable(self.motor3_mem)
-        enable(self.motor4_mem)
+        self.enable(self.motor1_mem)
+        self.enable(self.motor2_mem)
+        self.enable(self.motor3_mem)
+        self.enable(self.motor4_mem)
 
         # Movement for 2 seconds
         time.sleep(2)
 
         # Prevent latch by setting backward moving motors forward
-        prevent_latch(self.motor3_mem)
-        prevent_latch(self.motor4_mem)
+        self.prevent_latch(self.motor3_mem)
+        self.prevent_latch(self.motor4_mem)
 
-        disable(self.motor1_mem)
-        disable(self.motor2_mem)
-        disable(self.motor3_mem)
-        disable(self.motor4_mem)
+        self.disable(self.motor1_mem)
+        self.disable(self.motor2_mem)
+        self.disable(self.motor3_mem)
+        self.disable(self.motor4_mem)
 
 
     def turn_left(self):
-        prep_move(self.motor1_mem, 25000, 50000, 1)
-        prep_move(self.motor2_mem, 25000, 50000, 1)
-        prep_move(self.motor3_mem, 25000, 50000, 0)
-        prep_move(self.motor4_mem, 25000, 50000, 0)
+        self.prep_move(self.motor1_mem, 25000, 50000, 1)
+        self.prep_move(self.motor2_mem, 25000, 50000, 1)
+        self.prep_move(self.motor3_mem, 25000, 50000, 0)
+        self.prep_move(self.motor4_mem, 25000, 50000, 0)
 
-        enable(self.motor1_mem)
-        enable(self.motor2_mem)
-        enable(self.motor3_mem)
-        enable(self.motor4_mem)
+        self.enable(self.motor1_mem)
+        self.enable(self.motor2_mem)
+        self.enable(self.motor3_mem)
+        self.enable(self.motor4_mem)
 
         # Movement for 2 seconds
         time.sleep(2)
 
         # Prevent latch by setting backward moving motors forward
-        prevent_latch(self.motor1_mem)
-        prevent_latch(self.motor2_mem)
+        self.prevent_latch(self.motor1_mem)
+        self.prevent_latch(self.motor2_mem)
 
-        disable(self.motor1_mem)
-        disable(self.motor2_mem)
-        disable(self.motor3_mem)
-        disable(self.motor4_mem)
+        self.disable(self.motor1_mem)
+        self.disable(self.motor2_mem)
+        self.disable(self.motor3_mem)
+        self.disable(self.motor4_mem)
 
 
     def forward(self):
-        prep_move(self.motor1_mem, 25000, 50000, 0)
-        prep_move(self.motor2_mem, 25000, 50000, 0)
-        prep_move(self.motor3_mem, 25000, 50000, 0)
-        prep_move(self.motor4_mem, 25000, 50000, 0)
+        self.prep_move(self.motor1_mem, 25000, 50000, 0)
+        self.prep_move(self.motor2_mem, 25000, 50000, 0)
+        self.prep_move(self.motor3_mem, 25000, 50000, 0)
+        self.prep_move(self.motor4_mem, 25000, 50000, 0)
 
-        enable(self.motor1_mem)
-        enable(self.motor2_mem)
-        enable(self.motor3_mem)
-        enable(self.motor4_mem)
+        self.enable(self.motor1_mem)
+        self.enable(self.motor2_mem)
+        self.enable(self.motor3_mem)
+        self.enable(self.motor4_mem)
 
         # Movement for 2 seconds
         time.sleep(2)
 
-        disable(self.motor1_mem)
-        disable(self.motor2_mem)
-        disable(self.motor3_mem)
-        disable(self.motor4_mem)
+        self.disable(self.motor1_mem)
+        self.disable(self.motor2_mem)
+        self.disable(self.motor3_mem)
+        self.disable(self.motor4_mem)
 
 
     def backward(self):
-        prep_move(self.motor1_mem, 25000, 50000, 1)
-        prep_move(self.motor2_mem, 25000, 50000, 1)
-        prep_move(self.motor3_mem, 25000, 50000, 1)
-        prep_move(self.motor4_mem, 25000, 50000, 1)
+        self.prep_move(self.motor1_mem, 25000, 50000, 1)
+        self.prep_move(self.motor2_mem, 25000, 50000, 1)
+        self.prep_move(self.motor3_mem, 25000, 50000, 1)
+        self.prep_move(self.motor4_mem, 25000, 50000, 1)
 
-        enable(self.motor1_mem)
-        enable(self.motor2_mem)
-        enable(self.motor3_mem)
-        enable(self.motor4_mem)
+        self.enable(self.motor1_mem)
+        self.enable(self.motor2_mem)
+        self.enable(self.motor3_mem)
+        self.enable(self.motor4_mem)
 
         # Movement for 2 seconds
         time.sleep(2)
 
         # Prevent latch by setting backward moving motors forward
-        prevent_latch(self.motor1_mem)
-        prevent_latch(self.motor2_mem)
-        prevent_latch(self.motor3_mem)
-        prevent_latch(self.motor4_mem)
+        self.prevent_latch(self.motor1_mem)
+        self.prevent_latch(self.motor2_mem)
+        self.prevent_latch(self.motor3_mem)
+        self.prevent_latch(self.motor4_mem)
 
-        disable(self.motor1_mem)
-        disable(self.motor2_mem)
-        disable(self.motor3_mem)
-        disable(self.motor4_mem)
+        self.disable(self.motor1_mem)
+        self.disable(self.motor2_mem)
+        self.disable(self.motor3_mem)
+        self.disable(self.motor4_mem)
 
 
     def maze(self):
-        prep_move(self.motor1_mem, 25000, 50000, 0)
-        prep_move(self.motor2_mem, 25000, 50000, 0)
-        prep_move(self.motor3_mem, 25000, 50000, 0)
-        prep_move(self.motor4_mem, 25000, 50000, 0)
+        self.prep_move(self.motor1_mem, 25000, 50000, 0)
+        self.prep_move(self.motor2_mem, 25000, 50000, 0)
+        self.prep_move(self.motor3_mem, 25000, 50000, 0)
+        self.prep_move(self.motor4_mem, 25000, 50000, 0)
 
-        enable(self.motor1_mem)
-        enable(self.motor2_mem)
-        enable(self.motor3_mem)
-        enable(self.motor4_mem)
+        self.enable(self.motor1_mem)
+        self.enable(self.motor2_mem)
+        self.enable(self.motor3_mem)
+        self.enable(self.motor4_mem)
 
         # Write 1 to sync and sleep for 1 seconds
         # before fetching contents of ultrasonic mmap addresses
@@ -208,28 +208,28 @@ class Motor:
     
     def maze_backward(self):
         # Indefinitely move backward
-        prep_move(self.motor1_mem, 25000, 50000, 1)
-        prep_move(self.motor2_mem, 25000, 50000, 1)
-        prep_move(self.motor3_mem, 25000, 50000, 1)
-        prep_move(self.motor4_mem, 25000, 50000, 1)
+        self.prep_move(self.motor1_mem, 25000, 50000, 1)
+        self.prep_move(self.motor2_mem, 25000, 50000, 1)
+        self.prep_move(self.motor3_mem, 25000, 50000, 1)
+        self.prep_move(self.motor4_mem, 25000, 50000, 1)
 
-        enable(self.motor1_mem)
-        enable(self.motor2_mem)
-        enable(self.motor3_mem)
-        enable(self.motor4_mem)
+        self.enable(self.motor1_mem)
+        self.enable(self.motor2_mem)
+        self.enable(self.motor3_mem)
+        self.enable(self.motor4_mem)
 
 
     def maze_left(self):
         # Move left
-        prep_move(self.motor1_mem, 25000, 50000, 1)
-        prep_move(self.motor2_mem, 25000, 50000, 1)
-        prep_move(self.motor3_mem, 25000, 50000, 0)
-        prep_move(self.motor4_mem, 25000, 50000, 0)
+        self.prep_move(self.motor1_mem, 25000, 50000, 1)
+        self.prep_move(self.motor2_mem, 25000, 50000, 1)
+        self.prep_move(self.motor3_mem, 25000, 50000, 0)
+        self.prep_move(self.motor4_mem, 25000, 50000, 0)
 
-        enable(self.motor1_mem)
-        enable(self.motor2_mem)
-        enable(self.motor3_mem)
-        enable(self.motor4_mem)
+        self.enable(self.motor1_mem)
+        self.enable(self.motor2_mem)
+        self.enable(self.motor3_mem)
+        self.enable(self.motor4_mem)
 
         # NEED TO DETERMINE WHEN TO STOP - IMU
         # NEED less sleep on IMUs/whole process so we can fetch dps
@@ -239,21 +239,21 @@ class Motor:
             accumlated_degrees += self.imu_obj.get_w_z()
 
         # PREVENT LATCHING
-        prevent_latch(self.motor1_mem)
-        prevent_latch(self.motor2_mem)
+        self.prevent_latch(self.motor1_mem)
+        self.prevent_latch(self.motor2_mem)
 
 
     def maze_right(self):
         # Move right
-        prep_move(self.motor1_mem, 25000, 50000, 0)
-        prep_move(self.motor2_mem, 25000, 50000, 0)
-        prep_move(self.motor3_mem, 25000, 50000, 1)
-        prep_move(self.motor4_mem, 25000, 50000, 1)
+        self.prep_move(self.motor1_mem, 25000, 50000, 0)
+        self.prep_move(self.motor2_mem, 25000, 50000, 0)
+        self.prep_move(self.motor3_mem, 25000, 50000, 1)
+        self.prep_move(self.motor4_mem, 25000, 50000, 1)
 
-        enable(self.motor1_mem)
-        enable(self.motor2_mem)
-        enable(self.motor3_mem)
-        enable(self.motor4_mem)
+        self.enable(self.motor1_mem)
+        self.enable(self.motor2_mem)
+        self.enable(self.motor3_mem)
+        self.enable(self.motor4_mem)
 
         # NEED TO DETERMINE WHEN TO STOP - IMU
         # NEED less sleep on IMUs/whole process so we can fetch dps
@@ -263,8 +263,8 @@ class Motor:
             accumlated_degrees += (1000 - self.imu_obj.get_w_z())
 
         # PREVENT LATCHING
-        prevent_latch(self.motor3_mem)
-        prevent_latch(self.motor4_mem)
+        self.prevent_latch(self.motor3_mem)
+        self.prevent_latch(self.motor4_mem)
 
 
 class Ultrasonic:
@@ -355,7 +355,7 @@ class IMU:
 
 
 Ultrasonics = Ultrasonic(mem6)
-IMUs = IMUs(mem5)
+IMUs = IMU(mem5)
 Motors = Motor(mem1, mem2, mem3, mem4, Ultrasonics, IMUs)
 
 while 1:
