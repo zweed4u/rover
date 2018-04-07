@@ -234,9 +234,9 @@ class Motor:
         # NEED TO DETERMINE WHEN TO STOP - IMU
         # NEED less sleep on IMUs/whole process so we can fetch dps
         accumlated_degrees = 0
-        accuumlated_degrees = self.imu_obj.get_w_z()
-        while accuumlated_degrees < 90:
-            accuumlated_degrees += self.imu_obj.get_w_z()
+        accumlated_degrees = self.imu_obj.get_w_z()
+        while accumlated_degrees < 90:
+            accumlated_degrees += self.imu_obj.get_w_z()
 
         # PREVENT LATCHING
         prevent_latch(self.motor1_mem)
@@ -258,9 +258,9 @@ class Motor:
         # NEED TO DETERMINE WHEN TO STOP - IMU
         # NEED less sleep on IMUs/whole process so we can fetch dps
         accumlated_degrees = 0
-        accuumlated_degrees = (1000 - self.imu_obj.get_w_z())
-        while accuumlated_degrees < 90:
-            accuumlated_degrees += (1000 - self.imu_obj.get_w_z())
+        accumlated_degrees = (1000 - self.imu_obj.get_w_z())
+        while accumlated_degrees < 90:
+            accumlated_degrees += (1000 - self.imu_obj.get_w_z())
 
         # PREVENT LATCHING
         prevent_latch(self.motor3_mem)
@@ -360,7 +360,7 @@ Motors = Motor(mem1, mem2, mem3, mem4, Ultrasonics, IMUs)
 
 while 1:
     # Rover to go forward - has sleep for 2 seconds which will block
-    #Motors.maze()
+    Motors.maze()
     """
     # microseconds / 59 is distance in cmp
     # every tick is 20 ns.
