@@ -4,7 +4,7 @@ import os
 import time
 import mmap
 import struct
-from threading import Thread
+#from threading import Thread
 
 # mem1 - mem4
 # pwm_enable            <= slv_reg0(0);
@@ -14,6 +14,16 @@ from threading import Thread
 # slv_reg4              <= encoder_blips;
 
 # mem5
+# 32768 is 2g => 16384 is 1g 
+# 32768 is 500dps => 16.384 is 1dps 
+# slv_reg0    -- x accel
+# slv_reg1    -- y accel
+# slv_reg2    -- z accel
+# slv_reg3    -- wx
+# slv_reg3    -- wy
+# slv_reg3    -- wz
+
+# mem6
 # slv_reg0    -- sync     [bit 0]    -- 0
 # slv_reg1    -- ultrasonic1
 # slv_reg2    -- ultrasonic2
@@ -32,21 +42,25 @@ f2 = open("/dev/mem", "r+b")
 f3 = open("/dev/mem", "r+b")
 f4 = open("/dev/mem", "r+b")
 f5 = open("/dev/mem", "r+b")
+f6 = open("/dev/mem", "r+b")
 
 mem1 = mmap.mmap(f1.fileno(), 32, offset=0x40001000)
 mem2 = mmap.mmap(f2.fileno(), 32, offset=0x40002000)
 mem3 = mmap.mmap(f3.fileno(), 32, offset=0x40003000)
 mem4 = mmap.mmap(f4.fileno(), 32, offset=0x40004000)
-mem5 = mmap.mmap(f5.fileno(), 32, offset=0x40008000)
+mem5 = mmap.mmap(f5.fileno(), 32, offset=0x40006000)
+mem6 = mmap.mmap(f6.fileno(), 32, offset=0x40008000)
 
 
 class Motor:
-    def __init__(self, motor1_mem, motor2_mem, motor3_mem, motor4_mem, ultrasonic_obj):
+    def __init__(self, motor1_mem, motor2_mem, motor3_mem, motor4_mem, ultrasonic_obj, imu_obj):
         self.motor1_mem = motor1_mem
         self.motor2_mem = motor2_mem
         self.motor3_mem = motor3_mem
         self.motor4_mem = motor4_mem
         self.ultrasonic_obj = ultrasonic_obj
+        self.imu_obj = imu_obj
+
 
     def prep_move(self, wheel_mem, duty, period, direction):
         wheel_mem.seek(4) 
@@ -218,6 +232,12 @@ class Motor:
         enable(self.motor4_mem)
 
         # NEED TO DETERMINE WHEN TO STOP - IMU
+        # NEED less sleep on IMUs/whole process so we can fetch dps
+        accumlated_degrees = 0
+        accuumlated_degrees = self.imu_obj.get_w_z()
+        while accuumlated_degrees < 90:
+            accuumlated_degrees += self.imu_obj.get_w_z()
+
         # PREVENT LATCHING
         prevent_latch(self.motor1_mem)
         prevent_latch(self.motor2_mem)
@@ -236,6 +256,12 @@ class Motor:
         enable(self.motor4_mem)
 
         # NEED TO DETERMINE WHEN TO STOP - IMU
+        # NEED less sleep on IMUs/whole process so we can fetch dps
+        accumlated_degrees = 0
+        accuumlated_degrees = (1000 - self.imu_obj.get_w_z())
+        while accuumlated_degrees < 90:
+            accuumlated_degrees += (1000 - self.imu_obj.get_w_z())
+
         # PREVENT LATCHING
         prevent_latch(self.motor3_mem)
         prevent_latch(self.motor4_mem)
@@ -266,12 +292,75 @@ class Ultrasonic:
         return struct.unpack('l', self.sensor_mem.read(4))[0]
 
 
-Ultrasonics = Ultrasonic(mem5)
-Motors = Motor(mem1, mem2, mem3, mem4, Ultrasonics)
+
+class IMU:
+    def __init__(self, imu_mem):
+        self.imu_mem = imu_mem
+
+
+    def get_a_x(self):
+        # return g's
+        self.imu_mem.seek(0) 
+        result = struct.unpack('l', self.imu_mem.read(4))[0]
+        if result >  32767: 
+            result = -1 * (65536 - result)
+        return result/16384.0
+
+
+    def get_a_y(self):
+        # return g's
+        self.imu_mem.seek(4) 
+        result = struct.unpack('l', self.imu_mem.read(4))[0]
+        if result >  32767: 
+            result = -1 * (65536 - result)
+        return result/16384.0
+
+
+    def get_a_z(self):
+        # return g's
+        self.imu_mem.seek(8) 
+        result = struct.unpack('l', self.imu_mem.read(4))[0]
+        if result >  32767: 
+            result = -1 * (65536 - result)
+        return result/16384.0
+
+
+    def get_w_x(self):
+        # return degrees per second
+        self.imu_mem.seek(12) 
+        result = struct.unpack('l', self.imu_mem.read(4))[0]
+        if result >  32767: 
+            result = -1 * (65536 - result)
+        return result/65.536
+
+
+    def get_w_y(self):
+        # return degrees per second
+        self.imu_mem.seek(16) 
+        result = struct.unpack('l', self.imu_mem.read(4))[0]
+        if result >  32767: 
+            result = -1 * (65536 - result)
+        return result/65.536
+
+
+    def get_w_z(self):
+        # return degrees per second
+        # rotation about the center of the rover
+        self.imu_mem.seek(20) 
+        result = struct.unpack('l', self.imu_mem.read(4))[0]
+        if result >  32767: 
+            result = -1 * (65536 - result)
+        return result/65.536
+
+
+
+Ultrasonics = Ultrasonic(mem6)
+IMUs = IMUs(mem5)
+Motors = Motor(mem1, mem2, mem3, mem4, Ultrasonics, IMUs)
 
 while 1:
     # Rover to go forward - has sleep for 2 seconds which will block
-    Motors.maze()
+    #Motors.maze()
     """
     # microseconds / 59 is distance in cmp
     # every tick is 20 ns.
@@ -286,9 +375,11 @@ mem2.close()
 mem3.close()
 mem4.close()
 mem5.close()
+mem6.close()
 
 f1.close()
 f2.close()
 f3.close()
 f4.close()
 f5.close()
+f6.close()
