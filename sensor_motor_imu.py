@@ -71,6 +71,18 @@ class Motor:
         wheel_mem.write(struct.pack('l', period))
 
 
+    def read_encoders(self):
+        self.motor1_mem.seek(16)
+        self.motor2_mem.seek(16)
+        self.motor3_mem.seek(16)
+        self.motor4_mem.seek(16)
+        encoder1 = struct.unpack('l', self.motor1_mem.read(4))[0]
+        encoder2 = struct.unpack('l', self.motor2_mem.read(4))[0]
+        encoder3 = struct.unpack('l', self.motor3_mem.read(4))[0]
+        encoder4 = struct.unpack('l', self.motor4_mem.read(4))[0]
+        return {'Motor1_ticks': encoder1, 'Motor2_ticks': encoder2, 'Motor3_ticks': encoder3, 'Motor4_ticks': encoder4}
+
+
     def enable(self, wheel_mem):
         wheel_mem.seek(0) 
         wheel_mem.write(struct.pack('l', 1))
@@ -205,7 +217,7 @@ class Motor:
                 # Turn right
                 self.maze_right()
 
-    
+
     def maze_backward(self):
         # Indefinitely move backward
         self.prep_move(self.motor1_mem, 25000, 50000, 1)
@@ -301,57 +313,52 @@ class IMU:
     def get_a_x(self):
         # return g's
         self.imu_mem.seek(0) 
-        result = struct.unpack('l', self.imu_mem.read(4))[0]
-        if result >  32767: 
-            result = -1 * (65536 - result)
-        return result/16384.0
+        return self.get_g()
 
 
     def get_a_y(self):
         # return g's
         self.imu_mem.seek(4) 
-        result = struct.unpack('l', self.imu_mem.read(4))[0]
-        if result >  32767: 
-            result = -1 * (65536 - result)
-        return result/16384.0
+        return self.get_g()
 
 
     def get_a_z(self):
         # return g's
         self.imu_mem.seek(8) 
+        return self.get_g()
+
+
+    def get_g(self):
         result = struct.unpack('l', self.imu_mem.read(4))[0]
         if result >  32767: 
             result = -1 * (65536 - result)
         return result/16384.0
 
 
-    def get_w_x(self):
-        # return degrees per second
-        self.imu_mem.seek(12) 
+    def get_dps(self):
         result = struct.unpack('l', self.imu_mem.read(4))[0]
         if result >  32767: 
             result = -1 * (65536 - result)
         return result/65.536
+
+
+    def get_w_x(self):
+        # return degrees per second
+        self.imu_mem.seek(12)
+        return self.get_dps()
 
 
     def get_w_y(self):
         # return degrees per second
         self.imu_mem.seek(16) 
-        result = struct.unpack('l', self.imu_mem.read(4))[0]
-        if result >  32767: 
-            result = -1 * (65536 - result)
-        return result/65.536
+        return self.get_dps()
 
 
     def get_w_z(self):
         # return degrees per second
         # rotation about the center of the rover
         self.imu_mem.seek(20) 
-        result = struct.unpack('l', self.imu_mem.read(4))[0]
-        if result >  32767: 
-            result = -1 * (65536 - result)
-        return result/65.536
-
+        return self.get_dps()
 
 
 Ultrasonics = Ultrasonic(mem6)
