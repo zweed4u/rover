@@ -4,7 +4,6 @@ import os
 import time
 import mmap
 import struct
-#from threading import Thread
 
 # mem1 - mem4
 # pwm_enable            <= slv_reg0(0);
@@ -34,7 +33,7 @@ os.system('cat firmware/system.bin > /dev/xdevcfg')
 # 2ft (~61cm) quanta
 # ~8in (~20cm) rover
 # ~20cm clearance on each side
-DISTANCE_CM_THRESHOLD = 15
+DISTANCE_CM_THRESHOLD = 5
 
 # open dev mem and see to base address
 f1 = open("/dev/mem", "r+b")
@@ -61,7 +60,6 @@ class Motor:
         self.ultrasonic_obj = ultrasonic_obj
         self.imu_obj = imu_obj
 
-
     def prep_move(self, wheel_mem, duty, period, direction):
         wheel_mem.seek(4) 
         wheel_mem.write(struct.pack('l', direction))   
@@ -69,7 +67,6 @@ class Motor:
         wheel_mem.write(struct.pack('l', duty))
         wheel_mem.seek(12) 
         wheel_mem.write(struct.pack('l', period))
-
 
     def read_encoders(self):
         self.motor1_mem.seek(16)
@@ -82,21 +79,17 @@ class Motor:
         encoder4 = struct.unpack('l', self.motor4_mem.read(4))[0]
         return {'Motor1_ticks': encoder1, 'Motor2_ticks': encoder2, 'Motor3_ticks': encoder3, 'Motor4_ticks': encoder4}
 
-
     def enable(self, wheel_mem):
         wheel_mem.seek(0) 
         wheel_mem.write(struct.pack('l', 1))
-
 
     def disable(self, wheel_mem):
         wheel_mem.seek(0) 
         wheel_mem.write(struct.pack('l', 0))
 
-
     def prevent_latch(self, wheel_mem):
         wheel_mem.seek(4) 
         wheel_mem.write(struct.pack('l', 0)) 
-
 
     def turn_right(self):
         self.prep_move(self.motor1_mem, 25000, 50000, 0)
@@ -121,7 +114,6 @@ class Motor:
         self.disable(self.motor3_mem)
         self.disable(self.motor4_mem)
 
-
     def turn_left(self):
         self.prep_move(self.motor1_mem, 25000, 50000, 1)
         self.prep_move(self.motor2_mem, 25000, 50000, 1)
@@ -145,7 +137,6 @@ class Motor:
         self.disable(self.motor3_mem)
         self.disable(self.motor4_mem)
 
-
     def forward(self):
         self.prep_move(self.motor1_mem, 25000, 50000, 0)
         self.prep_move(self.motor2_mem, 25000, 50000, 0)
@@ -164,7 +155,6 @@ class Motor:
         self.disable(self.motor2_mem)
         self.disable(self.motor3_mem)
         self.disable(self.motor4_mem)
-
 
     def backward(self):
         self.prep_move(self.motor1_mem, 25000, 50000, 1)
@@ -191,7 +181,6 @@ class Motor:
         self.disable(self.motor3_mem)
         self.disable(self.motor4_mem)
 
-
     def maze(self):
         self.prep_move(self.motor1_mem, 25000, 50000, 0)
         self.prep_move(self.motor2_mem, 25000, 50000, 0)
@@ -217,7 +206,6 @@ class Motor:
                 # Turn right
                 self.maze_right()
 
-
     def maze_backward(self):
         # Indefinitely move backward
         self.prep_move(self.motor1_mem, 25000, 50000, 1)
@@ -229,7 +217,6 @@ class Motor:
         self.enable(self.motor2_mem)
         self.enable(self.motor3_mem)
         self.enable(self.motor4_mem)
-
 
     def maze_left(self):
         # Move left
@@ -253,7 +240,6 @@ class Motor:
         # PREVENT LATCHING
         self.prevent_latch(self.motor1_mem)
         self.prevent_latch(self.motor2_mem)
-
 
     def maze_right(self):
         # Move right
@@ -286,47 +272,39 @@ class Ultrasonic:
     def ultrasonic_sync(self):
         self.sensor_mem.seek(0) 
         self.sensor_mem.write(struct.pack('l', 1))
-        time.sleep(1) 
-
+        time.sleep(.2)  # 60ms * 3 sensors = 180ms ~.2 seconds
 
     def left_sensor(self):
         self.sensor_mem.seek(4) 
         return struct.unpack('l', self.sensor_mem.read(4))[0]
 
-
     def middle_sensor(self):
         self.sensor_mem.seek(8) 
         return struct.unpack('l', self.sensor_mem.read(4))[0]
-
 
     def right_sensor(self):
         self.sensor_mem.seek(12) 
         return struct.unpack('l', self.sensor_mem.read(4))[0]
 
 
-
 class IMU:
     def __init__(self, imu_mem):
         self.imu_mem = imu_mem
-
 
     def get_a_x(self):
         # return g's
         self.imu_mem.seek(0) 
         return self.get_g()
 
-
     def get_a_y(self):
         # return g's
         self.imu_mem.seek(4) 
         return self.get_g()
 
-
     def get_a_z(self):
         # return g's
         self.imu_mem.seek(8) 
         return self.get_g()
-
 
     def get_g(self):
         result = struct.unpack('l', self.imu_mem.read(4))[0]
@@ -334,25 +312,21 @@ class IMU:
             result = -1 * (65536 - result)
         return result/16384.0
 
-
     def get_dps(self):
         result = struct.unpack('l', self.imu_mem.read(4))[0]
         if result >  32767: 
             result = -1 * (65536 - result)
         return result/65.536
 
-
     def get_w_x(self):
         # return degrees per second
         self.imu_mem.seek(12)
         return self.get_dps()
 
-
     def get_w_y(self):
         # return degrees per second
         self.imu_mem.seek(16) 
         return self.get_dps()
-
 
     def get_w_z(self):
         # return degrees per second
