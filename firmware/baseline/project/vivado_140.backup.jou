@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Apr 10 18:16:29 2018
+# Process ID: 140
+# Current directory: C:/Users/zdw7287/Downloads/rover-dev/firmware/baseline/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3460 C:\Users\zdw7287\Downloads\rover-dev\firmware\baseline\project\baseline.xpr
+# Log file: C:/Users/zdw7287/Downloads/rover-dev/firmware/baseline/project/vivado.log
+# Journal file: C:/Users/zdw7287/Downloads/rover-dev/firmware/baseline/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/zdw7287/Downloads/rover-dev/firmware/baseline/project/baseline.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/zdw7287/Downloads/rover-dev/firmware/baseline/src/design_1.bd}
+regenerate_bd_layout
+regenerate_bd_layout

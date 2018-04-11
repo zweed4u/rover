@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Apr 10 18:16:29 2018
+# Process ID: 140
+# Current directory: C:/Users/zdw7287/Downloads/rover-dev/firmware/baseline/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3460 C:\Users\zdw7287\Downloads\rover-dev\firmware\baseline\project\baseline.xpr
+# Log file: C:/Users/zdw7287/Downloads/rover-dev/firmware/baseline/project/vivado.log
+# Journal file: C:/Users/zdw7287/Downloads/rover-dev/firmware/baseline/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/zdw7287/Downloads/rover-dev/firmware/baseline/project/baseline.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/zdw7287/Downloads/rover-dev/firmware/baseline/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 862.344 ; gain = 97.840
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/zdw7287/Downloads/rover-dev/firmware/baseline/src/design_1.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding cell -- craftdrones:user:blink:1.0 - blink_0
+Adding cell -- xilinx.com:user:receiver_wrapper:1.0 - receiver_wrapper_0
+Adding cell -- xilinx.com:user:imu_wrapper:1.0 - imu_wrapper_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /processing_system7_0/FCLK_RESET0_N(rst) and /receiver_wrapper_0/reset_n(undef)
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <design_1> from BD file <C:/Users/zdw7287/Downloads/rover-dev/firmware/baseline/src/design_1.bd>
+regenerate_bd_layout
+regenerate_bd_layout
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 10 18:19:01 2018...

@@ -230,6 +230,7 @@ class Motor:
         self.enable(self.motor3_mem)
         self.enable(self.motor4_mem)
 
+        # TODO needs to be reworked - based off DPS
         # NEED TO DETERMINE WHEN TO STOP - IMU
         # NEED less sleep on IMUs/whole process so we can fetch dps
         accumlated_degrees = 0
@@ -253,6 +254,7 @@ class Motor:
         self.enable(self.motor3_mem)
         self.enable(self.motor4_mem)
 
+        # TODO needs to be reworked - based off DPS
         # NEED TO DETERMINE WHEN TO STOP - IMU
         # NEED less sleep on IMUs/whole process so we can fetch dps
         accumlated_degrees = 0
