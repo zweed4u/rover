@@ -4,6 +4,7 @@ import os
 import time
 import mmap
 import struct
+from ctypes import cdll, c_float
 
 raw_input('Ensure to write bitstream before running this program!')
 # mem1 - mem4
@@ -44,6 +45,9 @@ class Motor:
         self.motor4_mem = motor4_mem
         self.imu_obj = imu_obj
 
+        # C wrapper 
+        self.c_imu = cdll.LoadLibrary('./c_imu.so')
+
     def prep_move(self, wheel_mem, duty, period, direction):
         wheel_mem.seek(4)
         wheel_mem.write(struct.pack('l', direction))
@@ -64,44 +68,52 @@ class Motor:
         wheel_mem.seek(4)
         wheel_mem.write(struct.pack('l', 0))
 
-    def maze_left(self):
+    def maze_left(self, bias):
+        #bias is a float
         degrees_to_turn = 90.0
-        time_elapsed = 0
-        degrees_traveled = 0.
 
         # Move left
         # backwards motion requires 1-duty_motor_f
-        self.prep_move(self.motor1_mem, 25000, 50000, 1)
-        self.prep_move(self.motor2_mem, 25000, 50000, 1)
-        self.prep_move(self.motor3_mem, 25000, 50000, 0)
-        self.prep_move(self.motor4_mem, 25000, 50000, 0)
+        # self.prep_move(self.motor1_mem, 25000, 50000, 1)
+        # self.prep_move(self.motor2_mem, 25000, 50000, 1)
+        # self.prep_move(self.motor3_mem, 25000, 50000, 0)
+        # self.prep_move(self.motor4_mem, 25000, 50000, 0)
 
-        self.enable(self.motor1_mem)
-        self.enable(self.motor2_mem)
-        self.enable(self.motor3_mem)
-        self.enable(self.motor4_mem)
+        # self.enable(self.motor1_mem)
+        # self.enable(self.motor2_mem)
+        # self.enable(self.motor3_mem)
+        # self.enable(self.motor4_mem)
 
-        while time_elapsed < 1000:
-            degrees_traveled += self.imu_obj.get_w_z()/1000.
-            if degrees_traveled >= degrees_to_turn:
-                print 'Break hit'
-                break
-            time_elapsed += 1
-            time.sleep(.001)
-        print degrees_traveled
-
+        # Use C to while loop
+        self.c_imu.turn_loop.restype = c_float
+        self.c_imu.turn_loop.argtypes = [c_float, c_float]
+        degrees_turned = self.c_imu.turn_loop(degrees_to_turn, bias)
+        print "We turned {} degrees".format(degrees_turned)
         # PREVENT LATCHING
-        self.prevent_latch(self.motor1_mem)
-        self.prevent_latch(self.motor2_mem)
-        self.disable(self.motor1_mem)
-        self.disable(self.motor2_mem)
-        self.disable(self.motor3_mem)
-        self.disable(self.motor4_mem)
+        # self.prevent_latch(self.motor1_mem)
+        # self.prevent_latch(self.motor2_mem)
+        # self.disable(self.motor1_mem)
+        # self.disable(self.motor2_mem)
+        # self.disable(self.motor3_mem)
+        # self.disable(self.motor4_mem)
 
 
 class IMU:
     def __init__(self, imu_mem):
         self.imu_mem = imu_mem
+
+    def data_collect_calibrate(self):
+        SECONDS_TO_RUN = 5.0 # 1 second
+        raw_input('Fetching idle w_z dps values for {} seconds\nDo not move rover!'.format(SECONDS_TO_RUN))
+        samples = []
+        tic = time.time()
+        while (time.time() - tic) <= SECONDS_TO_RUN:
+            samples.append(self.get_w_z())
+        print "# samples: {}".format(len(samples))
+        print "min: {}".format(min(samples))
+        print "max: {}".format(max(samples))
+        print "avg: {}".format(sum(samples)/len(samples))
+        return sum(samples)/len(samples)
 
     def get_a_x(self):
         # return g's
@@ -150,7 +162,8 @@ class IMU:
 IMUs = IMU(mem5)
 Motors = Motor(mem1, mem2, mem3, mem4, IMUs)
 
-Motors.maze_left()
+average_bias = IMUs.data_collect_calibrate()
+Motors.maze_left(average_bias)
 
 mem1.close()
 mem2.close()

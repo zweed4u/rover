@@ -7,7 +7,7 @@
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <sys/time.h>   /* gettimeofday, timeval (for timestamp in microsecond) */
+#include <sys/time.h>
 
 #define ADDR_IMU 0x40006000
 #define WZ_DPS_OFFSET 20
@@ -28,11 +28,13 @@ long long int get_current_us(void){
     return timestamp_usec;
 }
 
-float turn_loop(float degrees_to_turn){
+float turn_loop(float degrees_to_turn, float bias){
     int time_elapsed = 0;
     float degrees_traveled = 0.0;
     long long int prev_proc_time = 0;
-    
+    float dt = 0.0;
+    float imu_reading = 0.0;
+
     // MAPPING
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
     void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_IMU & ~MAP_MASK);
@@ -40,24 +42,34 @@ float turn_loop(float degrees_to_turn){
     void* wz_dps = imu + WZ_DPS_OFFSET;
 
     // while we've been turning for less than 1 second
-    while (time_elapsed <= 1000){
+    while (time_elapsed <= 5000){
         // skip the first 1ms can't integrate single point
         if (time_elapsed != 0){
-            // riemann sum rectangles  - 
-            degrees_traveled += ((*((uint32_t*)wz_dps)) * (get_current_us() - prev_proc_time));
+            // riemann sum rectangles
+            dt = (get_current_us() - prev_proc_time)/1000000.0;
+            imu_reading = *((uint32_t*)wz_dps);
+            printf("%.6f   %.6f\n", imu_reading, imu_reading-bias);
+            if (imu_reading >  32767){ 
+                imu_reading = -1 * (65536 - imu_reading);
+            }
+            degrees_traveled += ((imu_reading/65.536) * dt);
+            printf("%.6f\n", degrees_traveled);
         }
         // determine if 90 degrees reached
         if (degrees_traveled >= degrees_to_turn){
-            printf("Requested turn degree limit reached");
             break;
         }
         time_elapsed++;
         prev_proc_time = get_current_us();
-        usleep(ONE_MS_IN_US);
+        usleep(ONE_MS_IN_US);  // 1ms sleep
     }
-
+    printf("bias: %.6f\n", bias);
     // CLOSE MAP - RETURN VALUE
     munmap(map, MAP_SIZE);
     close(fd);
     return degrees_traveled;
+}
+
+int main(){
+    turn_loop(0.0, 0.0);
 }
