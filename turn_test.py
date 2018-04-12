@@ -14,8 +14,8 @@ raw_input('Ensure to write bitstream before running this program!')
 # slv_reg4              <= encoder_blips;
 
 # mem5
-# 32768 is 2g => 16384 is 1g 
-# 32768 is 500dps => 16.384 is 1dps 
+# 32768 is 2g => 16384 is 1g
+# 32768 is 500dps => 16.384 is 1dps
 # slv_reg0    -- x accel
 # slv_reg1    -- y accel
 # slv_reg2    -- z accel
@@ -45,31 +45,32 @@ class Motor:
         self.imu_obj = imu_obj
 
     def prep_move(self, wheel_mem, duty, period, direction):
-        wheel_mem.seek(4) 
-        wheel_mem.write(struct.pack('l', direction))   
-        wheel_mem.seek(8) 
+        wheel_mem.seek(4)
+        wheel_mem.write(struct.pack('l', direction))
+        wheel_mem.seek(8)
         wheel_mem.write(struct.pack('l', duty))
-        wheel_mem.seek(12) 
+        wheel_mem.seek(12)
         wheel_mem.write(struct.pack('l', period))
 
     def enable(self, wheel_mem):
-        wheel_mem.seek(0) 
+        wheel_mem.seek(0)
         wheel_mem.write(struct.pack('l', 1))
 
     def disable(self, wheel_mem):
-        wheel_mem.seek(0) 
+        wheel_mem.seek(0)
         wheel_mem.write(struct.pack('l', 0))
 
     def prevent_latch(self, wheel_mem):
-        wheel_mem.seek(4) 
-        wheel_mem.write(struct.pack('l', 0)) 
+        wheel_mem.seek(4)
+        wheel_mem.write(struct.pack('l', 0))
 
     def maze_left(self):
         degrees_to_turn = 90.0
         time_elapsed = 0
-        accumlated_degrees = 0
+        degrees_traveled = 0.
 
         # Move left
+        # backwards motion requires 1-duty_motor_f
         self.prep_move(self.motor1_mem, 25000, 50000, 1)
         self.prep_move(self.motor2_mem, 25000, 50000, 1)
         self.prep_move(self.motor3_mem, 25000, 50000, 0)
@@ -80,14 +81,14 @@ class Motor:
         self.enable(self.motor3_mem)
         self.enable(self.motor4_mem)
 
-        # Figure out current speed and period of turn - 1ms update
-        speed_in_dps = self.imu_obj.get_w_z()
-        print 'Turning {} degrees per second'.format(speed_in_dps)
-        print 'To turn 90 degrees we need to continue turn for {} seconds'.format(90.0/speed_in_dps)
-        while time_elapsed < (degrees_to_turn/speed_in_dps)*1000:
-            # print self.imu_obj.get_w_z() #ensure this is constant at given pwm
+        while time_elapsed < 1000:
+            degrees_traveled += self.imu_obj.get_w_z()/1000.
+            if degrees_traveled >= degrees_to_turn:
+                print 'Break hit'
+                break
             time_elapsed += 1
             time.sleep(.001)
+        print degrees_traveled
 
         # PREVENT LATCHING
         self.prevent_latch(self.motor1_mem)
@@ -98,24 +99,23 @@ class Motor:
         self.disable(self.motor4_mem)
 
 
-
 class IMU:
     def __init__(self, imu_mem):
         self.imu_mem = imu_mem
 
     def get_a_x(self):
         # return g's
-        self.imu_mem.seek(0) 
+        self.imu_mem.seek(0)
         return self.get_g()
 
     def get_a_y(self):
         # return g's
-        self.imu_mem.seek(4) 
+        self.imu_mem.seek(4)
         return self.get_g()
 
     def get_a_z(self):
         # return g's
-        self.imu_mem.seek(8) 
+        self.imu_mem.seek(8)
         return self.get_g()
 
     def get_g(self):
