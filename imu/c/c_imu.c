@@ -30,11 +30,11 @@ long long int get_current_us(void){
 
 float turn_loop(float degrees_to_turn, float bias){
     int time_elapsed = 0;
-    float delta_time_seconds = 0.0;
     float raw_imu_reading = 0.0;
     float degrees_traveled = 0.0;
+    float delta_time_seconds = 0.0;
     long long int prev_proc_time = 0;
-    float dps_reading_minus_bias = 0.0
+    float dps_reading_minus_bias = 0.0;
 
     // MAPPING
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
@@ -50,7 +50,7 @@ float turn_loop(float degrees_to_turn, float bias){
             if (raw_imu_reading >  32767){ 
                 raw_imu_reading = -1 * (65536 - raw_imu_reading);
             }
-            dps_reading_minus_bias = (raw_imu_reading/65.536) - bias
+            dps_reading_minus_bias = (raw_imu_reading/65.536) - bias;
             degrees_traveled += (dps_reading_minus_bias * delta_time_seconds);
             printf("%.6f\n", degrees_traveled);
         }
