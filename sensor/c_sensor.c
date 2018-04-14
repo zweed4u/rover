@@ -35,61 +35,50 @@ long long int get_current_us(void){
     return timestamp_usec;
 }
 
-float* fetch_echo(void){
-    float sensor_pulse_times[3];
+float fetch_echo(int sensor_index){
+    float sensor_pulse_time;
     long long int echo_pulse_tic = 0;
     long long int echo_pulse_toc = 0;
+    void* current_sensor;
 
     // MAPPING
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
     void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_SENSOR & ~MAP_MASK);
     void* sensor_base = map + (ADDR_SENSOR & MAP_MASK);
-    void* left_sensor = sensor_base + LEFT_SENSOR_OFFSET;
-    void* middle_sensor = sensor_base + MIDDLE_SENSOR_OFFSET;
-    void* right_sensor = sensor_base + RIGHT_SENSOR_OFFSET;
 
-    // Left sensor
-    while (!*((uint32_t*)left_sensor)){  // while left sensor has 0
+    if (sensor_index == 0){
+        void* current_sensor = sensor_base + LEFT_SENSOR_OFFSET;
+    }
+    else if (sensor_index == 1){
+        void* current_sensor = sensor_base + MIDDLE_SENSOR_OFFSET;
+    }
+    else if (sensor_index == 2){
+        void* current_sensor = sensor_base + RIGHT_SENSOR_OFFSET;
+    }
+    else{
+        return -1;  // parameter passed not valid index for sensor
+    }
+
+    while (!*((uint32_t*)current_sensor)){  // while current sensor has 0
         echo_pulse_tic = get_current_us();
     }            
-    while (*((uint32_t*)left_sensor)){  // sensor received something
+    while (*((uint32_t*)current_sensor)){  // sensor received something
         echo_pulse_toc = get_current_us();
     }
-    // microseconds of the echo to be emitted and return from the left sensor
-    sensor_pulse_times[0] = echo_pulse_toc - echo_pulse_tic;
-    echo_pulse_tic = 0;
-    echo_pulse_toc = 0;
 
-    // Middle sensor
-    while (!*((uint32_t*)middle_sensor)){  // while middle sensor has 0
-        echo_pulse_tic = get_current_us();
-    }            
-    while (*((uint32_t*)middle_sensor)){  // sensor received something
-        echo_pulse_toc = get_current_us();
-    }
-    // microseconds of the echo to be emitted and return from the middle sensor
-    sensor_pulse_times[1] = echo_pulse_toc - echo_pulse_tic;
-    echo_pulse_tic = 0;
-    echo_pulse_toc = 0;
-
-    // Right sensor
-    while (!*((uint32_t*)right_sensor)){  // while right sensor has 0
-        echo_pulse_tic = get_current_us();
-    }            
-    while (*((uint32_t*)right_sensor)){  // sensor received something
-        echo_pulse_toc = get_current_us();
-    }
-    // microseconds of the echo to be emitted and return from the right sensor
-    sensor_pulse_times[2] = echo_pulse_toc - echo_pulse_tic;
-
+    // microseconds of the echo to be emitted and return from the passed sensor
+    sensor_pulse_time = echo_pulse_toc - echo_pulse_tic;
 
     munmap(map, MAP_SIZE);
     close(fd);
-    return sensor_pulse_times;  // array of pulse times reported from sensors [left, middle, right]
+    return sensor_pulse_time;
 }
 
 float* get_readings(void){
     float *pulse_times_array;
+    float left_time = 0.0;
+    float middle_time = 0.0;
+    float right_time = 0.0;
 
     // MAPPING
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
@@ -97,15 +86,25 @@ float* get_readings(void){
     void* sensor_base = map + (ADDR_SENSOR & MAP_MASK);
     void* sensor_enables = sensor_base + ENABLE_OFFSET;
 
-    // Enable all sensors
-    *((uint32_t*)sensor_enables) = 7;  // 111
+    // Enable all sensors => 111
 
-    // listen for echo here
-    pulse_times_array = fetch_echo();
+    // Enable left
+    *((uint32_t*)sensor_enables) = 1;
+    left_time = fetch_echo(0);
+    pulse_times_array[0] = left_time;
+
+    // Enable middle
+    *((uint32_t*)sensor_enables) = 2;
+    middle_time = fetch_echo(1);
+    pulse_times_array[1] = middle_time;
+
+    // Enable right
+    *((uint32_t*)sensor_enables) = 4;
+    right_time = fetch_echo(2);
+    pulse_times_array[2] = right_time;
     
     munmap(map, MAP_SIZE);
     close(fd);
-
     return pulse_times_array;
 }
 
