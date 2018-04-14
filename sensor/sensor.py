@@ -8,11 +8,11 @@ raw_input('Ensure to write bitstream before running this program!')
 class Sensor:
     def __init__(self):
         self.c_sensor = cdll.LoadLibrary('./sensor.so')
-        #self.c_sensor.get_readings.restype = c_float
-        self.c_sensor.get_readings.restype = POINTER(c_float * 3)
+        self.c_sensor.fetch_echo_results.restype = POINTER(c_float * 3)  # array of floats (ticks or microseconds?)
+        self.c_sensor.enable_all_sensors()
 
     def read(self):
-        sensor_readings = self.c_sensor.get_readings()
+        sensor_readings = self.c_sensor.fetch_echo_results()
         sensor_cms = map(lambda reading: (SOUND_CM_PER_SECOND * ((reading / 2.) / MICROSECONDS_IN_SECOND)), sensor_readings)
         left_sensor_cm = sensor_cms[0]
         middle_sensor_cm = sensor_cms[1]
