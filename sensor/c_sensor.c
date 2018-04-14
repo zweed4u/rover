@@ -9,8 +9,8 @@
 #include <fcntl.h>
 #include <sys/time.h>
 
-#define ADDR_SENSOR_TRIGGER 0x43C00000
-#define TRIGGER_OFFSET 0
+#define ADDR_SENSOR 0x43C00000
+#define ENABLE_OFFSET 0
 // #define LEFT_SENSOR 0x43C00010
 // #define MIDDLE_SENSOR 0x43C00020
 // #define RIGHT_SENSOR 0x43C00030
@@ -42,8 +42,8 @@ float* fetch_echo(void){
 
     // MAPPING
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_SENSOR_TRIGGER & ~MAP_MASK);
-    void* sensor_base = map + (ADDR_SENSOR_TRIGGER & MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_SENSOR & ~MAP_MASK);
+    void* sensor_base = map + (ADDR_SENSOR & MAP_MASK);
     void* left_sensor = sensor_base + LEFT_SENSOR_OFFSET;
     void* middle_sensor = sensor_base + MIDDLE_SENSOR_OFFSET;
     void* right_sensor = sensor_base + RIGHT_SENSOR_OFFSET;
@@ -93,17 +93,12 @@ float* get_readings(void){
 
     // MAPPING
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_SENSOR_TRIGGER & ~MAP_MASK);
-    void* sensor_base = map + (ADDR_SENSOR_TRIGGER & MAP_MASK);
-    void* sensor_triggers = sensor_base + TRIGGER_OFFSET;
+    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_SENSOR & ~MAP_MASK);
+    void* sensor_base = map + (ADDR_SENSOR & MAP_MASK);
+    void* sensor_enables = sensor_base + ENABLE_OFFSET;
 
-    // Get in known state - low
-    *((uint32_t*)sensor_triggers) = 0;
-
-    // Trigger - high for 10 microseconds
-    *((uint32_t*)sensor_triggers) = 7;  // 111
-    usleep(TEN_MICROSECONDS);
-    *((uint32_t*)sensor_triggers) = 0;
+    // Enable all sensors
+    *((uint32_t*)sensor_enables) = 7;  // 111
 
     // listen for echo here
     pulse_times_array = fetch_echo();
