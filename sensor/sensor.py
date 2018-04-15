@@ -1,7 +1,7 @@
 import time
 from ctypes import cdll, c_float, POINTER
 
-SOUND_CM_PER_SECOND = 34000
+SOUND_CM_PER_SECOND = 34000.
 SYSTEM_CLOCK_HZ = 100000000.  # 100MHz
 
 raw_input('Ensure to write bitstream before running this program!')
