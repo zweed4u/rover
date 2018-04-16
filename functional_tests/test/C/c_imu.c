@@ -28,6 +28,21 @@ long long int get_current_us(void){
     return timestamp_usec;
 }
 
+float get_current_wz_dps(void){
+    float raw_imu_reading = 0.0;
+    int fd = open("/dev/mem", O_RDWR | O_SYNC);
+    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_IMU & ~MAP_MASK);
+    void* imu = map + (ADDR_IMU & MAP_MASK);
+    void* wz_dps = imu + WZ_DPS_OFFSET;
+    raw_imu_reading = *((uint32_t*)wz_dps);
+    if (raw_imu_reading >  32767){ 
+        raw_imu_reading = -1 * (65536 - raw_imu_reading);
+    }
+    munmap(map, MAP_SIZE);
+    close(fd);
+    return (raw_imu_reading/65.536);
+}
+
 float turn_loop(float degrees_to_turn, float bias){
     int time_elapsed = 0;
     float raw_imu_reading = 0.0;
