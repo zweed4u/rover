@@ -5,7 +5,7 @@
 import os
 from flask import Flask
 from flask import render_template
-from forms import GUIForm
+from forms import ControlForm
 from flask import flash
 from flask import redirect
 from flask import session
@@ -15,13 +15,13 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'rover-web'
 
 
-@app.route('/gui', methods=['GET', 'POST'])
-def gui():
+@app.route('/control', methods=['GET', 'POST'])
+def control():
     """
-    /gui - Form that allows users to specify pwm period, duty cycle and enable
-    :return: /submitted - on successful POST, /gui - if fail
+    /control - Form that allows users to specify pwm period, duty cycle and enable
+    :return: /submitted - on successful POST, /control - if fail
     """
-    form = GUIForm()
+    form = ControlForm()
     if form.validate_on_submit():
         # Extract data from form submission
         session['straight'] = form.straight_button.data
@@ -44,7 +44,7 @@ def gui():
         # Use in base.html to display previous entries
         flash('You clicked: {}'.format(command_clicked))
         return redirect('/submitted')
-    return render_template('/gui.html', title='Submit', form=form)
+    return render_template('/control.html', title='Submit', form=form)
 
 
 @app.route("/submitted")
@@ -69,19 +69,19 @@ def submitted():
     for key in command_map:
         if command_map[key]:
             command_clicked = key
-    #Rover_Backend.set_command(command_clicked)
+    Rover_Backend.set_command(command_clicked)
     return "Your update request has been submitted"
 
 
 @app.route("/")
 def main():
     """
-    Redirect to /gui form
-    :return: /gui
+    Redirect to /control form
+    :return: /control
     """
-    return redirect('/gui')
+    return redirect('/control')
 
 
 if __name__ == "__main__":
-    #Rover_Backend = ControlLogic(0, 0, False)
+    Rover_Backend = ControlLogic()
     app.run(host='0.0.0.0')

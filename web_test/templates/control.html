@@ -1,10 +1,10 @@
-    <h1>Rover Web GUI</h1>
+    <h1>Rover Web Interface</h1>
     <form action="" method="post">
         {{ form.hidden_tag() }}
         <p>{{ form.straight_button() }}</p>
-        <p>{{ form.turn_left_button() }}</p>
-        <p>{{ form.turn_right_button() }}</p>
-        <p>{{ form.backwards_button() }}</p>
+        <p>{{ form.turn_left_button() }}
+           {{ form.backwards_button() }}
+           {{ form.turn_right_button() }}</p>
         <p>{{ form.three_sixty_button() }}</p>
     </form>
 {% extends "base.html" %}

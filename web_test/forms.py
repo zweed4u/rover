@@ -6,7 +6,7 @@ from flask_wtf import FlaskForm
 from wtforms import SubmitField
 
 
-class GUIForm(FlaskForm):
+class ControlForm(FlaskForm):
     """
     Form elements used in Flask app form
     """
