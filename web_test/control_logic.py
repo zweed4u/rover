@@ -14,10 +14,10 @@ class ControlLogic:
         # self.enable = enable
 
         # # C wrapper 
-        self.pwm_lib = cdll.LoadLibrary('./pwm_drv.so')
-        self.pwm_lib.set_duty.argtypes = [c_int]
-        self.pwm_lib.set_period.argtypes = [c_int]
-        self.pwm_lib.set_enable.argtypes = [c_int]
+        # self.pwm_lib = cdll.LoadLibrary('./pwm_drv.so')
+        # self.pwm_lib.set_duty.argtypes = [c_int]
+        # self.pwm_lib.set_period.argtypes = [c_int]
+        # self.pwm_lib.set_enable.argtypes = [c_int]
 
 
     def set_command(self, command_string):
