@@ -10,7 +10,7 @@ class FunctionalTest:
         self.imu = IMU(5.0)  # calibrate IMU - get bias
         self.motor = Motor()
         self.sensor = Sensor()
-        self.middle_sensor_threshold_cm = 12.
+        self.middle_sensor_threshold_cm = 21.48
 
     def start(self):
         self.motor.enable()
