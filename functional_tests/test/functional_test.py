@@ -4,6 +4,7 @@ from imu import IMU
 from motor import Motor
 from sensor import Sensor
 
+SYSTEM_CLOCK_HZ = 100000000
 
 class FunctionalTest:
     def __init__(self):
@@ -13,11 +14,18 @@ class FunctionalTest:
         self.middle_sensor_threshold_cm = 21.48
 
     def start(self):
+        # Move forward
+        self.motor.set_motors_forward()
+        self.motor.set_period_a(1000000.)  # 1000000 ticks - 10ms
+        self.motor.set_period_b(1000000.)  # 1000000 ticks - 10ms
+        self.motor.set_period_c(1000000.)  # 1000000 ticks - 10ms
+        self.motor.set_period_d(1000000.)  # 1000000 ticks - 10ms
+        self.motor.set_duty_a(500000.)  # 500000 ticks - 5ms
+        self.motor.set_duty_b(500000.)  # 500000 ticks - 5ms
+        self.motor.set_duty_c(500000.)  # 500000 ticks - 5ms
+        self.motor.set_duty_d(500000.)  # 500000 ticks - 5ms
         self.motor.enable()
         while 1:
-            # Move forward
-            self.motor.set_motors_forward()
-
             # get sensor readings
             sensor_readings = self.sensor.read()
             left_sensor_reading = sensor_readings[0]
