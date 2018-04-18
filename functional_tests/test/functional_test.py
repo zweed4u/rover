@@ -24,7 +24,7 @@ class FunctionalTest:
         self.motor.set_duty_b(500000.)  # 500000 ticks - 5ms
         self.motor.set_duty_c(500000.)  # 500000 ticks - 5ms
         self.motor.set_duty_d(500000.)  # 500000 ticks - 5ms
-        self.motor.enable()
+        self.motor.enable_motors()
         while 1:
             # get sensor readings
             sensor_readings = self.sensor.read()
