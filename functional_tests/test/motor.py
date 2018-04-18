@@ -80,3 +80,9 @@ class Motor:
     def get_encoder_d(self):
         self.c_motor.read_encoder_d.restype = c_float
         self.c_motor.read_encoder_d()
+
+    def stop_motors(self):
+        self.set_duty_a(0.)
+        self.set_duty_b(0.)
+        self.set_duty_c(0.)
+        self.set_duty_d(0.)

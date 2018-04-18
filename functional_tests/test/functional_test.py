@@ -14,6 +14,9 @@ class FunctionalTest:
         self.middle_sensor_threshold_cm = 21.48
 
     def start(self):
+        # Enable all sensors
+        self.sensor.enable_all_sensors()
+
         # Move forward
         self.motor.set_motors_forward()
         self.motor.set_period_a(1000000.)  # 1000000 ticks - 10ms
@@ -25,25 +28,28 @@ class FunctionalTest:
         self.motor.set_duty_c(500000.)  # 500000 ticks - 5ms
         self.motor.set_duty_d(500000.)  # 500000 ticks - 5ms
         self.motor.enable_motors()
+
         while 1:
-            # get sensor readings
-            sensor_readings = self.sensor.read()
+            # get sensor readings - can also make use of individual sensor getters
+            sensor_readings = self.sensor.read_all()
+            print sensor_readings
             left_sensor_reading = sensor_readings[0]
             middle_sensor_reading = sensor_readings[1]
             right_sensor_reading = sensor_readings[2]
 
             if middle_sensor_reading <= self.middle_sensor_threshold_cm:
-                # middle sensor detects an object within 12 cm in front
+                # middle sensor detects an object within 21.48 cm in front
                 if left_sensor_reading > right_sensor_reading:
                     self.motor.set_motors_for_left_turn()
-                    self.imu.turn_loop(90.)  # TODO: keep track of orientation
+                    self.imu.turn_loop(90.)  # TODO: keep track of orientation?
 
                 elif left_sensor_reading < right_sensor_reading:
                     self.motor.set_motors_for_right_turn()
-                    self.imu.turn_loop(-90.)  # TODO: keep track of orientation
+                    self.imu.turn_loop(-90.)  # TODO: keep track of orientation?
 
                 else:
                     raise Exeception('Unable to determine which way to turn.\nLeft sensor reading: {}cm\nRight sensor reading: {}cm'.format(left_sensor_reading, right_sensor_reading))
 
 
-FunctionalTest().start()
+myTest = FunctionalTest()
+myTest.start()
