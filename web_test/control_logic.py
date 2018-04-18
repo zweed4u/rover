@@ -32,7 +32,7 @@ class ControlLogic:
             self.motor.set_duty_d(500000.)  # 500000 ticks - 5ms
 
         elif command_string == 'backward':
-            self.motor.set_motors_forward()
+            self.motor.set_motors_backward()
             self.motor.set_period_a(1000000.)  # 1000000 ticks - 10ms
             self.motor.set_period_b(1000000.)  # 1000000 ticks - 10ms
             self.motor.set_period_c(1000000.)  # 1000000 ticks - 10ms
