@@ -11,19 +11,19 @@
 
 #define ADDR_MOTOR 0x43C10000
 #define ENABLE_OFFSET 0  // 1 bit - 0 or 1
-#define DIRECTION_OFFSET 16  // 4 bits - 0 to 15  dir d, dir c, dir b, dir a
-#define PERIOD_A_OFFSET 32  // 27 bits
-#define PERIOD_B_OFFSET 48  // 27 bits
-#define PERIOD_C_OFFSET 64  // 27 bits
-#define PERIOD_D_OFFSET 80  // 27 bits
-#define DUTY_A_OFFSET 96  // 27 bits
-#define DUTY_B_OFFSET 112  // 27 bits
-#define DUTY_C_OFFSET 128  // 27 bits
-#define DUTY_D_OFFSET 144  // 27 bits
-#define ENCODER_A_OFFSET 160 // 32 bits - msb clears encoder a
-#define ENCODER_B_OFFSET 176 // 32 bits - msb clears encoder b
-#define ENCODER_C_OFFSET 192 // 32 bits - msb clears encoder c
-#define ENCODER_D_OFFSET 208 // 32 bits - msb clears encoder d
+#define DIRECTION_OFFSET 4  // 4 bits - 0 to 15  dir d, dir c, dir b, dir a
+#define PERIOD_A_OFFSET 8  // 27 bits
+#define PERIOD_B_OFFSET 12  // 27 bits
+#define PERIOD_C_OFFSET 16  // 27 bits
+#define PERIOD_D_OFFSET 20  // 27 bits
+#define DUTY_A_OFFSET 24  // 27 bits
+#define DUTY_B_OFFSET 28  // 27 bits
+#define DUTY_C_OFFSET 32  // 27 bits
+#define DUTY_D_OFFSET 36  // 27 bits
+#define ENCODER_A_OFFSET 40 // 32 bits - msb clears encoder a
+#define ENCODER_B_OFFSET 44 // 32 bits - msb clears encoder b
+#define ENCODER_C_OFFSET 48 // 32 bits - msb clears encoder c
+#define ENCODER_D_OFFSET 52 // 32 bits - msb clears encoder d
 
 #define MAP_SIZE 4096UL
 #define MAP_MASK MAP_SIZE - 1

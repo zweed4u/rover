@@ -10,7 +10,13 @@
 #include <sys/time.h>
 
 #define ADDR_IMU 0x40006000
+#define AX_DPS_OFFSET 0
+#define AY_DPS_OFFSET 4
+#define AZ_DPS_OFFSET 8
+#define WX_DPS_OFFSET 12
+#define WY_DPS_OFFSET 16
 #define WZ_DPS_OFFSET 20
+
 #define MAP_SIZE 4096UL
 #define MAP_MASK MAP_SIZE - 1
 
