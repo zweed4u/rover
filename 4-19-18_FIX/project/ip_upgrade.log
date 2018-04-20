@@ -1,0 +1,499 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 19:02:44 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_3_0 from rit.edu:user:pwm_generator:3.5 (Rev. 1) to rit.edu:user:pwm_generator:3.6 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 19:02:44 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_2_0 from rit.edu:user:pwm_generator:3.5 (Rev. 1) to rit.edu:user:pwm_generator:3.6 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 19:02:44 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_1_0 from rit.edu:user:pwm_generator:3.5 (Rev. 1) to rit.edu:user:pwm_generator:3.6 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 19:02:44 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_0_0 from rit.edu:user:pwm_generator:3.5 (Rev. 1) to rit.edu:user:pwm_generator:3.6 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 18:48:18 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_3_0 from rit.edu:user:pwm_generator:3.4 (Rev. 1) to rit.edu:user:pwm_generator:3.5 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 18:48:18 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_2_0 from rit.edu:user:pwm_generator:3.4 (Rev. 1) to rit.edu:user:pwm_generator:3.5 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 18:48:18 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_1_0 from rit.edu:user:pwm_generator:3.4 (Rev. 1) to rit.edu:user:pwm_generator:3.5 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 18:48:18 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_0_0 from rit.edu:user:pwm_generator:3.4 (Rev. 1) to rit.edu:user:pwm_generator:3.5 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 18:31:45 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_3_0 from rit.edu:user:pwm_generator:3.3 (Rev. 1) to rit.edu:user:pwm_generator:3.4 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 18:31:45 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_2_0 from rit.edu:user:pwm_generator:3.3 (Rev. 1) to rit.edu:user:pwm_generator:3.4 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 18:31:45 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_1_0 from rit.edu:user:pwm_generator:3.3 (Rev. 1) to rit.edu:user:pwm_generator:3.4 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 18:31:45 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_0_0 from rit.edu:user:pwm_generator:3.3 (Rev. 1) to rit.edu:user:pwm_generator:3.4 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 18:21:33 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_3_0 from rit.edu:user:pwm_generator:3.2 (Rev. 1) to rit.edu:user:pwm_generator:3.3 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 18:21:33 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_2_0 from rit.edu:user:pwm_generator:3.2 (Rev. 1) to rit.edu:user:pwm_generator:3.3 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 18:21:33 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_1_0 from rit.edu:user:pwm_generator:3.2 (Rev. 1) to rit.edu:user:pwm_generator:3.3 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 18:21:33 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_0_0 from rit.edu:user:pwm_generator:3.2 (Rev. 1) to rit.edu:user:pwm_generator:3.3 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 18:02:50 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_3_0 from rit.edu:user:pwm_generator:3.1 (Rev. 1) to rit.edu:user:pwm_generator:3.2 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 18:02:50 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_2_0 from rit.edu:user:pwm_generator:3.1 (Rev. 1) to rit.edu:user:pwm_generator:3.2 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 18:02:50 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_1_0 from rit.edu:user:pwm_generator:3.1 (Rev. 1) to rit.edu:user:pwm_generator:3.2 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 18:02:50 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_0_0 from rit.edu:user:pwm_generator:3.1 (Rev. 1) to rit.edu:user:pwm_generator:3.2 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 17:38:38 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_3_0 from rit.edu:user:pwm_generator:3.0 (Rev. 1) to rit.edu:user:pwm_generator:3.1 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 17:38:38 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_2_0 from rit.edu:user:pwm_generator:3.0 (Rev. 1) to rit.edu:user:pwm_generator:3.1 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 17:38:38 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_1_0 from rit.edu:user:pwm_generator:3.0 (Rev. 1) to rit.edu:user:pwm_generator:3.1 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 19 17:38:38 2018
+| Host         : ECTET-1360-04 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pwm_generator_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pwm_generator_0_0 from rit.edu:user:pwm_generator:3.0 (Rev. 1) to rit.edu:user:pwm_generator:3.1 (Rev. 1)
+

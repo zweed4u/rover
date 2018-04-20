@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER motor_axi
+	OPTION supported_peripherals = (motor_axi);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = motor_axi;
+END DRIVER

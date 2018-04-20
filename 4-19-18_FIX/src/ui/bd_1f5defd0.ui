@@ -1,0 +1,107 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port M3_IN1 -pg 1 -y 820 -defaultsOSRD
+preplace port M2_IN1 -pg 1 -y 470 -defaultsOSRD
+preplace port DDR -pg 1 -y 710 -defaultsOSRD
+preplace port M3_IN2 -pg 1 -y 840 -defaultsOSRD
+preplace port M2_IN2 -pg 1 -y 490 -defaultsOSRD
+preplace port M4_IN1 -pg 1 -y 1120 -defaultsOSRD
+preplace port M4_IN2 -pg 1 -y 1140 -defaultsOSRD
+preplace port trigger_pulse_a -pg 1 -y 1300 -defaultsOSRD
+preplace port M1_IN1 -pg 1 -y 290 -defaultsOSRD
+preplace port trigger_pulse_b -pg 1 -y 1320 -defaultsOSRD
+preplace port M1_IN2 -pg 1 -y 310 -defaultsOSRD
+preplace port echo_pulse_a -pg 1 -y 1210 -defaultsOSRD
+preplace port trigger_pulse_c -pg 1 -y 1460 -defaultsOSRD
+preplace port echo_pulse_b -pg 1 -y 1370 -defaultsOSRD
+preplace port echo_pulse_c -pg 1 -y 1510 -defaultsOSRD
+preplace port led -pg 1 -y 990 -defaultsOSRD
+preplace port ENC_A -pg 1 -y 600 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 730 -defaultsOSRD
+preplace port ENC_B -pg 1 -y 440 -defaultsOSRD
+preplace port ENC_C -pg 1 -y 120 -defaultsOSRD
+preplace port ENC_D -pg 1 -y 280 -defaultsOSRD
+preplace port MPU9250_2 -pg 1 -y 930 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -y 940 -defaultsOSRD
+preplace inst blink_0 -pg 1 -lvl 4 -y 980 -defaultsOSRD
+preplace inst motor_axi_0 -pg 1 -lvl 3 -y 450 -defaultsOSRD
+preplace inst echo_pulse_measurer_0 -pg 1 -lvl 2 -y 1170 -defaultsOSRD
+preplace inst echo_pulse_measurer_1 -pg 1 -lvl 2 -y 1480 -defaultsOSRD
+preplace inst encoder_reader_top_0 -pg 1 -lvl 2 -y 570 -defaultsOSRD
+preplace inst echo_pulse_measurer_2 -pg 1 -lvl 2 -y 1330 -defaultsOSRD
+preplace inst pwm_generator_0 -pg 1 -lvl 4 -y 290 -defaultsOSRD
+preplace inst encoder_reader_top_1 -pg 1 -lvl 2 -y 400 -defaultsOSRD
+preplace inst pwm_generator_1 -pg 1 -lvl 4 -y 480 -defaultsOSRD
+preplace inst encoder_reader_top_2 -pg 1 -lvl 2 -y 60 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -y 890 -defaultsOSRD
+preplace inst pwm_generator_2 -pg 1 -lvl 4 -y 820 -defaultsOSRD
+preplace inst encoder_reader_top_3 -pg 1 -lvl 2 -y 230 -defaultsOSRD
+preplace inst ultrasonic_sensor_axi_0 -pg 1 -lvl 3 -y 1160 -defaultsOSRD
+preplace inst pwm_generator_3 -pg 1 -lvl 4 -y 1130 -defaultsOSRD
+preplace inst imu_wrapper_0 -pg 1 -lvl 3 -y 930 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 740 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 1 4 NJ 710 NJ 710 1440J 700 1690J
+preplace netloc ps7_0_axi_periph_M02_AXI 1 2 1 N
+preplace netloc pwm_generator_3_pwm_o 1 4 1 NJ
+preplace netloc motor_axi_0_dir_b 1 3 1 1480
+preplace netloc ENC_A_1 1 0 2 NJ 600 450J
+preplace netloc motor_axi_0_period_a 1 3 1 1440
+preplace netloc pwm_generator_1_dir_o 1 4 1 N
+preplace netloc motor_axi_0_dir_c 1 3 1 1470
+preplace netloc ENC_C_1 1 0 2 0J 100 NJ
+preplace netloc motor_axi_0_period_b 1 3 1 1440
+preplace netloc imu_wrapper_0_m00_iic 1 3 2 1430J 920 1690J
+preplace netloc pwm_generator_2_dir_o 1 4 1 1690
+preplace netloc motor_axi_0_dir_d 1 3 1 1390
+preplace netloc motor_axi_0_period_c 1 3 1 1410
+preplace netloc echo_pulse_measurer_0_echo_pulse_length_ready_o 1 2 1 960
+preplace netloc ultrasonic_sensor_axi_0_enable_a 1 1 3 500 1070 920J 1030 1320
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 420
+preplace netloc ENC_D_1 1 0 2 0J 270 NJ
+preplace netloc motor_axi_0_duty_a 1 3 1 1400
+preplace netloc motor_axi_0_period_d 1 3 1 1370
+preplace netloc echo_pulse_measurer_1_echo_pulse_length_ready_o 1 2 1 1000
+preplace netloc echo_pulse_measurer_2_echo_pulse_length_ready_o 1 2 1 980
+preplace netloc ultrasonic_sensor_axi_0_enable_b 1 1 3 500 1250 920J 1290 1320
+preplace netloc pwm_generator_0_pwm_o 1 4 1 1690J
+preplace netloc encoder_reader_top_2_encoder_pulse_count_o 1 2 1 1000
+preplace netloc motor_axi_0_duty_b 1 3 1 1430
+preplace netloc motor_axi_0_enable 1 1 3 460 700 NJ 700 1420
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 4 10 850 410 1050 880J 1000 1480
+preplace netloc ultrasonic_sensor_axi_0_enable_c 1 1 3 480 1080 890J 1020 1330
+preplace netloc motor_axi_0_duty_c 1 3 1 1380
+preplace netloc echo_pulse_c_1 1 0 2 NJ 1510 NJ
+preplace netloc echo_pulse_measurer_1_trigger_pulse_o 1 2 3 NJ 1460 NJ 1460 NJ
+preplace netloc echo_pulse_measurer_2_echo_pulse_length_o 1 2 1 990
+preplace netloc blink_0_blink_out 1 4 1 1690J
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 890
+preplace netloc pwm_generator_2_pwm_o 1 4 1 1690
+preplace netloc encoder_reader_top_1_encoder_pulse_count_o 1 2 1 950
+preplace netloc motor_axi_0_duty_d 1 3 1 1360
+preplace netloc echo_pulse_a_1 1 0 2 10J 1200 NJ
+preplace netloc echo_pulse_measurer_1_echo_pulse_length_o 1 2 1 1010
+preplace netloc rst_ps7_0_50M_interconnect_aresetn 1 1 1 490
+preplace netloc pwm_generator_0_dir_o 1 4 1 1690J
+preplace netloc motor_axi_0_clr_enc_a 1 1 3 500 660 NJ 660 1350
+preplace netloc processing_system7_0_FIXED_IO 1 1 4 NJ 730 940J 720 NJ 720 1690J
+preplace netloc motor_axi_0_clr_enc_b 1 1 3 470 670 NJ 670 1340
+preplace netloc echo_pulse_b_1 1 0 2 0J 1360 NJ
+preplace netloc echo_pulse_measurer_0_echo_pulse_length_o 1 2 1 970
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 3 430 1060 950 740 1460
+preplace netloc pwm_generator_1_pwm_o 1 4 1 N
+preplace netloc motor_axi_0_clr_enc_c 1 1 3 480 680 NJ 680 1330
+preplace netloc encoder_reader_top_0_encoder_pulse_count_o 1 2 1 880
+preplace netloc echo_pulse_measurer_2_trigger_pulse_o 1 2 3 NJ 1310 NJ 1310 1690J
+preplace netloc motor_axi_0_clr_enc_d 1 1 3 490 690 NJ 690 1320
+preplace netloc echo_pulse_measurer_0_trigger_pulse_o 1 2 3 910J 1010 1340J 1300 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 0 640 440 720 930 730 1450
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 900
+preplace netloc ENC_B_1 1 0 2 NJ 440 NJ
+preplace netloc encoder_reader_top_3_encoder_pulse_count_o 1 2 1 930
+preplace netloc pwm_generator_3_dir_o 1 4 1 NJ
+preplace netloc motor_axi_0_dir_a 1 3 1 1400
+levelinfo -pg 1 -20 210 700 1190 1590 1720 -top -30 -bot 1560
+",
+}
+0
