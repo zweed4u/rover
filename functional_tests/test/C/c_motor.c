@@ -39,6 +39,16 @@ void enable_all_motors(void){
     close(fd);
 }
 
+void disable_motors(void){
+    int fd = open("/dev/mem", O_RDWR | O_SYNC);
+    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
+    void* motor_enables = motor_base + ENABLE_OFFSET;
+    *((uint32_t*)motor_enables) = 0;  // 0
+    munmap(map, MAP_SIZE);
+    close(fd);
+}
+
 void set_forward_direction(void){
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
     void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);

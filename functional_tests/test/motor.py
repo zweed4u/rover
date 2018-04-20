@@ -86,3 +86,6 @@ class Motor:
         self.set_duty_b(0.)
         self.set_duty_c(0.)
         self.set_duty_d(0.)
+
+    def disable_motor():
+        self.c_motor.disable_motors()
