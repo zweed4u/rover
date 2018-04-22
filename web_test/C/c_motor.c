@@ -31,7 +31,7 @@
 
 void enable_all_motors(void){
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* motor_enables = motor_base + ENABLE_OFFSET;
     *((uint32_t*)motor_enables) = 1;  // 1
@@ -41,7 +41,7 @@ void enable_all_motors(void){
 
 void disable_motors(void){
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* motor_enables = motor_base + ENABLE_OFFSET;
     *((uint32_t*)motor_enables) = 0;  // 0
@@ -51,7 +51,7 @@ void disable_motors(void){
 
 void set_forward_direction(void){
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* motor_directions = motor_base + DIRECTION_OFFSET;
     *((uint32_t*)motor_directions) = 0;  // 0000
@@ -61,7 +61,7 @@ void set_forward_direction(void){
 
 void set_backward_direction(void){
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* motor_directions = motor_base + DIRECTION_OFFSET;
     *((uint32_t*)motor_directions) = 15;  // 1111
@@ -71,7 +71,7 @@ void set_backward_direction(void){
 
 void set_left_turn_direction(void){
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* motor_directions = motor_base + DIRECTION_OFFSET;
     *((uint32_t*)motor_directions) = 3;  // 0011 (DCBA)
@@ -81,7 +81,7 @@ void set_left_turn_direction(void){
 
 void set_right_turn_direction(void){
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* motor_directions = motor_base + DIRECTION_OFFSET;
     *((uint32_t*)motor_directions) = 12;  // 1100 (DCBA)
@@ -92,7 +92,7 @@ void set_right_turn_direction(void){
 void write_period_a(float period_a_value){
     //float period_a_val;
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* period_a = motor_base + PERIOD_A_OFFSET;
     *((uint32_t*)period_a) = period_a_value;
@@ -104,7 +104,7 @@ void write_period_a(float period_a_value){
 void write_period_b(float period_b_value){
     //float period_b_val;
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* period_b = motor_base + PERIOD_B_OFFSET;
     *((uint32_t*)period_b) = period_b_value;
@@ -116,7 +116,7 @@ void write_period_b(float period_b_value){
 void write_period_c(float period_c_value){
     //float period_c_val;
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* period_c = motor_base + PERIOD_C_OFFSET;
     *((uint32_t*)period_c) = period_c_value;
@@ -128,7 +128,7 @@ void write_period_c(float period_c_value){
 void write_period_d(float period_d_value){
     //float period_d_val;
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* period_d = motor_base + PERIOD_D_OFFSET;
     *((uint32_t*)period_d) = period_d_value;
@@ -140,7 +140,7 @@ void write_period_d(float period_d_value){
 void write_duty_a(float duty_a_value){
     //float duty_a_val;
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* duty_a = motor_base + DUTY_A_OFFSET;
     *((uint32_t*)duty_a) = duty_a_value;
@@ -152,7 +152,7 @@ void write_duty_a(float duty_a_value){
 void write_duty_b(float duty_b_value){
     //float duty_b_val;
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* duty_b = motor_base + DUTY_B_OFFSET;
     *((uint32_t*)duty_b) = duty_b_value;
@@ -164,7 +164,7 @@ void write_duty_b(float duty_b_value){
 void write_duty_c(float duty_c_value){
     //float duty_c_val;
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* duty_c = motor_base + DUTY_C_OFFSET;
     *((uint32_t*)duty_c) = duty_c_value;
@@ -176,7 +176,7 @@ void write_duty_c(float duty_c_value){
 void write_duty_d(float duty_d_value){
     //float duty_d_val;
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* duty_d = motor_base + DUTY_D_OFFSET;
     *((uint32_t*)duty_d) = duty_d_value;
@@ -187,7 +187,7 @@ void write_duty_d(float duty_d_value){
 
 void clear_motor_encoder_a(void){
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* motor_a_encoder = motor_base + ENCODER_A_OFFSET;
     *((uint32_t*)motor_a_encoder) = 0x80000000; // 2147483648 - 1000 0000 0000 0000 0000 0000 0000 0000
@@ -198,7 +198,7 @@ void clear_motor_encoder_a(void){
 float read_encoder_a(void){
     float encoder_a_ticks;
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* encoder_a = motor_base + ENCODER_A_OFFSET;
     encoder_a_ticks = *((uint32_t*)encoder_a) & 0x7FFFFFFF; // 30..0 = 2147483647
@@ -209,7 +209,7 @@ float read_encoder_a(void){
 
 void clear_motor_encoder_b(void){
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* motor_b_encoder = motor_base + ENCODER_B_OFFSET;
     *((uint32_t*)motor_b_encoder) = 0x80000000; // 2147483648 - 1000 0000 0000 0000 0000 0000 0000 0000
@@ -220,7 +220,7 @@ void clear_motor_encoder_b(void){
 float read_encoder_b(void){
     float encoder_b_ticks;
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* encoder_b = motor_base + ENCODER_B_OFFSET;
     encoder_b_ticks = *((uint32_t*)encoder_b) & 0x7FFFFFFF; // 30..0 = 2147483647
@@ -231,7 +231,7 @@ float read_encoder_b(void){
 
 void clear_motor_encoder_c(void){
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* motor_c_encoder = motor_base + ENCODER_C_OFFSET;
     *((uint32_t*)motor_c_encoder) = 0x80000000; // 2147483648 - 1000 0000 0000 0000 0000 0000 0000 0000
@@ -242,7 +242,7 @@ void clear_motor_encoder_c(void){
 float read_encoder_c(void){
     float encoder_c_ticks;
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* encoder_c = motor_base + ENCODER_C_OFFSET;
     encoder_c_ticks = *((uint32_t*)encoder_c) & 0x7FFFFFFF; // 30..0 = 2147483647
@@ -253,7 +253,7 @@ float read_encoder_c(void){
 
 void clear_motor_encoder_d(void){
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* motor_d_encoder = motor_base + ENCODER_D_OFFSET;
     *((uint32_t*)motor_d_encoder) = 0x80000000; // 2147483648 - 1000 0000 0000 0000 0000 0000 0000 0000
@@ -264,7 +264,7 @@ void clear_motor_encoder_d(void){
 float read_encoder_d(void){
     float encoder_d_ticks;
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
-    void* map = mmap(0, MAP_SIZE, PROT_READ, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
+    void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_MOTOR & ~MAP_MASK);
     void* motor_base = map + (ADDR_MOTOR & MAP_MASK);
     void* encoder_d = motor_base + ENCODER_D_OFFSET;
     encoder_d_ticks = *((uint32_t*)encoder_d) & 0x7FFFFFFF; // 30..0 = 2147483647

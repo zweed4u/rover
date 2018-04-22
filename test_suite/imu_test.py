@@ -3,6 +3,8 @@ import time
 from imu import IMU
 from motor import Motor
 
+# TODO: IMU TWEAKING
+
 class IMUTest:
     def __init__(self):
         self.imu = IMU(2)

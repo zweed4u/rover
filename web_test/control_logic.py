@@ -11,12 +11,12 @@ class ControlLogic:
         """
         Constructor for the backend logic of the rover web interface
         """
-        self.imu = IMU(1)  # 1 second calibration
+        #self.imu = IMU(1)  # 1 second calibration
         self.motor = Motor()
-        self.motor.set_duty_a(500000.)  # 500000 ticks - 5ms
-        self.motor.set_duty_b(500000.)  # 500000 ticks - 5ms
-        self.motor.set_duty_c(500000.)  # 500000 ticks - 5ms
-        self.motor.set_duty_d(500000.)  # 500000 ticks - 5ms
+        self.motor.set_duty_a(250000.)  # 500000 ticks - 5ms
+        self.motor.set_duty_b(250000.)  # 500000 ticks - 5ms
+        self.motor.set_duty_c(250000.)  # 500000 ticks - 5ms
+        self.motor.set_duty_d(250000.)  # 500000 ticks - 5ms
         self.motor.set_period_a(1000000.)  # 1000000 ticks - 10ms
         self.motor.set_period_b(1000000.)  # 1000000 ticks - 10ms
         self.motor.set_period_c(1000000.)  # 1000000 ticks - 10ms
@@ -44,19 +44,22 @@ class ControlLogic:
         elif command_string == 'left':
             self.motor.set_motors_for_left_turn()
             self.motor.enable_motors()
-            self.imu.get_degrees_turned(90.)
+            #self.imu.get_degrees_turned(90.)
+            time.sleep(2)
             self.motor.disable_motor()
 
         elif command_string == 'right':
             self.motor.set_motors_for_right_turn()
             self.motor.enable_motors()
-            self.imu.get_degrees_turned(-90.)
+            #self.imu.get_degrees_turned(-90.)
+            time.sleep(2)
             self.motor.disable_motor()
 
         elif command_string == '360':
             self.motor.set_motors_for_left_turn()
             self.motor.enable_motors()
-            self.imu.get_degrees_turned(360.)
+            #self.imu.get_degrees_turned(360.)
+            time.sleep(2)
             self.motor.disable_motor()
             
         else:
