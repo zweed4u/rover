@@ -9,7 +9,7 @@ class Sensor:
         self.c_sensor.fetch_echo_a_results.restype = c_float
         self.c_sensor.fetch_echo_b_results.restype = c_float
         self.c_sensor.fetch_echo_c_results.restype = c_float
-        self.c_sensor.fetch_echo_results.restype = POINTER(c_float * 3)
+        self.c_sensor.fetch_echo_results.restype = POINTER(c_float)
         self.SOUND_CM_PER_SECOND = 34300.
         self.SYSTEM_CLOCK_HZ = 100000000.
 
@@ -66,8 +66,8 @@ class Sensor:
 
     def read_all(self):
         sensor_ticks = self.c_sensor.fetch_echo_results()
+        sensor_ticks = [sensor_ticks[0], sensor_ticks[1], sensor_ticks[2]]
         # raw tick array
-        #print sensor_ticks
         sensor_cms = list(map(lambda round_trip_tick_reading: self.sensor_ticks_to_cm(round_trip_tick_reading), sensor_ticks))
         # left_sensor_cm = sensor_cms[0]
         # middle_sensor_cm = sensor_cms[1]

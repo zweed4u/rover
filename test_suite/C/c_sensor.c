@@ -18,8 +18,8 @@
 #define MAP_SIZE 4096UL
 #define MAP_MASK MAP_SIZE - 1
 
-float * fetch_echo_results(void){
-    float sensor_pulse_time[3];
+float *fetch_echo_results(void){
+    static float sensor_pulse_time[3];
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
     void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_SENSOR & ~MAP_MASK);
     void* sensor_base = map + (ADDR_SENSOR & MAP_MASK);

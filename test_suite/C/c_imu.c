@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <sys/mman.h>
 #include <sys/stat.h>
@@ -21,6 +22,7 @@
 #define MAP_MASK MAP_SIZE - 1
 
 #define ONE_MS_IN_US 1000
+
 
 unsigned long int get_current_us(void){
     unsigned long time_in_micros = 0;
@@ -46,7 +48,7 @@ float get_current_wz_dps(void){
 
 float turn_loop(float degrees_to_turn, float bias){
     int time_elapsed = 0;
-    unsigned int raw_imu_reading = 0.0;
+    unsigned int raw_imu_reading = 0;
     float degrees_traveled = 0.0;
     float delta_time_seconds = 0.0;
     long long int prev_proc_time = 0;
@@ -72,7 +74,7 @@ float turn_loop(float degrees_to_turn, float bias){
             degrees_traveled += (dps_reading_minus_bias * delta_time_seconds);
             //printf("%.6f\n", degrees_traveled);
         }
-        if (degrees_traveled >= degrees_to_turn){  // determine if 90 degrees reached
+        if (abs(degrees_traveled) >= abs(degrees_to_turn)){  // determine if 90 degrees reached
             break;
         }
         time_elapsed++;

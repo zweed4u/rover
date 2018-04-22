@@ -59,7 +59,12 @@ class SensorC(SensorTest):
         return self.sensors.read_sensor_c()
 
 
-#SensorTest().enable_all()
+# t = SensorTest()
+# t.enable_all()
+# while 1:
+#     print t.fetch_all()
+#     time.sleep(1)
+
 testA = SensorA()
 testB = SensorB()
 testC = SensorC()
