@@ -25,7 +25,6 @@
 
 
 unsigned long int get_current_us(void){
-    unsigned long time_in_micros = 0;
     struct timeval tv;
     gettimeofday(&tv,NULL);
     return 1000000 * tv.tv_sec + tv.tv_usec;
