@@ -31,8 +31,8 @@ unsigned long int get_current_us(void){
     return 1000000 * tv.tv_sec + tv.tv_usec;
 }
 
-float get_current_wz_dps(void){
-    float raw_imu_reading = 0.0;
+double get_current_wz_dps(void){
+    unsigned int raw_imu_reading = 0;
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
     void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_IMU & ~MAP_MASK);
     void* imu = map + (ADDR_IMU & MAP_MASK);
@@ -46,13 +46,13 @@ float get_current_wz_dps(void){
     return (raw_imu_reading/65.536);
 }
 
-float turn_loop(float degrees_to_turn, float bias){
-    int time_elapsed = 0;
+double turn_loop(float degrees_to_turn, float bias){
+    int num_loops_passed = 0;
     unsigned int raw_imu_reading = 0;
-    float degrees_traveled = 0.0;
-    float delta_time_seconds = 0.0;
-    long long int prev_proc_time = 0;
-    float dps_reading_minus_bias = 0.0;
+    double degrees_traveled = 0.0;
+    double delta_time_seconds = 0.0;
+    unsigned long int prev_proc_time = 0;
+    double dps_reading_minus_bias = 0.0;
 
     // MAPPING
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
@@ -60,8 +60,8 @@ float turn_loop(float degrees_to_turn, float bias){
     void* imu = map + (ADDR_IMU & MAP_MASK);
     void* wz_dps = imu + WZ_DPS_OFFSET;
 
-    while (time_elapsed <= 8000){  // while we've been turning for less than 1 second
-        if (time_elapsed != 0){  // skip the first 1ms can't integrate single point
+    while (num_loops_passed <= 8000){  // while we've been turning for less than 8 seconds
+        if (num_loops_passed != 0){  // skip the first 1ms can't integrate single point
             // riemann sum rectangles
             raw_imu_reading = *((uint32_t*)wz_dps);
             if (raw_imu_reading >  32767){ 
@@ -77,7 +77,7 @@ float turn_loop(float degrees_to_turn, float bias){
         if (abs(degrees_traveled) >= abs(degrees_to_turn)){  // determine if 90 degrees reached
             break;
         }
-        time_elapsed++;
+        num_loops_passed++;
         prev_proc_time = get_current_us();
         usleep(ONE_MS_IN_US);  // 1ms sleep
     }

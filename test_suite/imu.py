@@ -1,12 +1,12 @@
 import time
-from ctypes import cdll, c_float
+from ctypes import cdll, c_float, c_double
 
 
 class IMU:
     def __init__(self, seconds_to_calibrate=1):
         self.c_imu = cdll.LoadLibrary('./C/c_imu.so')
-        self.c_imu.turn_loop.restype = c_float
-        self.c_imu.get_current_wz_dps.restype = c_float
+        self.c_imu.turn_loop.restype = c_double
+        self.c_imu.get_current_wz_dps.restype = c_double
         self.c_imu.turn_loop.argtypes = [c_float, c_float]
         self.bias = self.data_collect_calibrate(seconds_to_calibrate)
 
