@@ -20,14 +20,8 @@ class Maze:
         self.sensors.enable_all_sensors()
 
         # Motors
-        self.motors.set_duty_a(500000)
-        self.motors.set_duty_b(500000)
-        self.motors.set_duty_c(500000)
-        self.motors.set_duty_d(500000)
-        self.motors.set_period_a(1000000)
-        self.motors.set_period_b(1000000)
-        self.motors.set_period_c(1000000)
-        self.motors.set_period_d(1000000)
+        self.motors.set_all_duty(500000)
+        self.motors.set_all_period(1000000)
         self.motors.set_motors_forward()
 
     def go(self):
@@ -49,10 +43,7 @@ class Maze:
             self.imu.get_degrees_turned(-90.*.20)
 
             # slow down to 11% and turn the rest of the rotation (80%)
-            self.motors.set_duty_a(110000)
-            self.motors.set_duty_b(110000)
-            self.motors.set_duty_c(110000)
-            self.motors.set_duty_d(110000)
+            self.motors.set_all_duty(110000)
             self.imu.get_degrees_turned(-90.*.80)
             self.motors.disable_motor()
 
@@ -65,21 +56,12 @@ class Maze:
             self.imu.get_degrees_turned(90.*.20)
 
             # slow down to 11% and turn the rest of the rotation (80%)
-            self.motors.set_duty_a(110000)
-            self.motors.set_duty_b(110000)
-            self.motors.set_duty_c(110000)
-            self.motors.set_duty_d(110000)
+            self.motors.set_all_duty(110000)
             self.imu.get_degrees_turned(90.*.80)
             self.motors.disable_motor()
 
-        self.motors.set_duty_a(500000)
-        self.motors.set_duty_b(500000)
-        self.motors.set_duty_c(500000)
-        self.motors.set_duty_d(500000)
-        self.motors.set_period_a(1000000)
-        self.motors.set_period_b(1000000)
-        self.motors.set_period_c(1000000)
-        self.motors.set_period_d(1000000)
+        self.motors.set_all_duty(500000)
+        #self.motors.set_all_period(1000000)
         self.motors.set_motors_forward()
         self.motors.enable_motors()
 
