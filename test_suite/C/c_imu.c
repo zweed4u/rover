@@ -32,7 +32,7 @@ unsigned long int get_current_us(void){
 }
 
 double get_current_wz_dps(void){
-    unsigned int raw_imu_reading = 0;
+    signed int raw_imu_reading = 0;
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
     void* map = mmap(0, MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, ADDR_IMU & ~MAP_MASK);
     void* imu = map + (ADDR_IMU & MAP_MASK);
