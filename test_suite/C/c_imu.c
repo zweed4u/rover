@@ -48,7 +48,7 @@ double get_current_wz_dps(void){
 
 double actuator(float degrees_to_turn, float bias){
     int num_loops_passed = 0;
-    unsigned int raw_imu_reading = 0;
+    signed int raw_imu_reading = 0;
     double degrees_traveled = 0.0;
     double delta_time_seconds = 0.0;
     unsigned long int prev_proc_time = 0;
