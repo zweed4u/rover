@@ -26,20 +26,14 @@ class MotorTest(object):
         self.motors.set_motors_for_right_turn()
 
     def set_duty(self, duty):
-        self.motors.set_duty_a(duty)
-        self.motors.set_duty_b(duty)
-        self.motors.set_duty_c(duty)
-        self.motors.set_duty_d(duty)
+        self.motors.set_all_duty(duty)
 
     def set_period(self, period):
-        self.motors.set_period_a(period)
-        self.motors.set_period_b(period)
-        self.motors.set_period_c(period)
-        self.motors.set_period_d(period)
+        self.motors.set_all_period(period)
 
 
 testMotor = MotorTest()
-testMotor.set_duty(250000)
+testMotor.set_duty(500000)
 testMotor.set_period(1000000) # 1000000 - 1 million ticks
 
 

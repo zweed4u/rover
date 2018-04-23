@@ -81,7 +81,19 @@ class Motor:
         self.c_motor.read_encoder_d.restype = c_float
         self.c_motor.read_encoder_d()
 
-    def stop_motors(self):
+    def set_all_period(self, period_ticks):
+        self.set_period_a(period_ticks)
+        self.set_period_b(period_ticks)
+        self.set_period_c(period_ticks)
+        self.set_period_d(period_ticks)
+
+    def set_all_duty(self, duty_ticks):
+        self.set_duty_a(duty_ticks)
+        self.set_duty_b(duty_ticks)
+        self.set_duty_c(duty_ticks)
+        self.set_duty_d(duty_ticks)
+
+    def idle_motors(self):
         self.set_duty_a(0.)
         self.set_duty_b(0.)
         self.set_duty_c(0.)

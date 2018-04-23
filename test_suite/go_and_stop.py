@@ -12,23 +12,18 @@ class GoAndStop:
         self.motors = Motor()
         self.sensors = Sensor()
         self.sensors.enable_all_sensors()
-        self.motors.set_duty_a(250000)
-        self.motors.set_duty_b(250000)
-        self.motors.set_duty_c(250000)
-        self.motors.set_duty_d(250000)
-        self.motors.set_period_a(1000000)
-        self.motors.set_period_b(1000000)
-        self.motors.set_period_c(1000000)
-        self.motors.set_period_d(1000000)
+        self.motors.set_all_duty(500000)
+        self.motors.set_all_period(1000000)
         self.motors.set_motors_forward()
 
     def go_until_detect(self):
-        self.motors.enable_motors()
-        while self.sensors.read_sensor_b() > self.middle_distance_threshold_cm:
-            # Still have enough distance between us and object in front
-            time.sleep(.1)
-        self.motors.disable_motor()
-        
+        while 1:
+            while self.sensors.read_sensor_b() > self.middle_distance_threshold_cm:
+                self.motors.enable_motors()
+                # Still have enough distance between us and object in front
+                print "Object {}cm ahead!".format(self.sensors.read_sensor_b())
+                time.sleep(.1)
+            self.motors.disable_motor()
 
 gasTest = GoAndStop()
 gasTest.go_until_detect()
@@ -58,14 +53,8 @@ gasTest.go_until_detect()
 #         self.sensor_thread.start()
 
 #         # Motor setup
-#         self.motors.set_duty_a(250000)
-#         self.motors.set_duty_b(250000)
-#         self.motors.set_duty_c(250000)
-#         self.motors.set_duty_d(250000)
-#         self.motors.set_period_a(1000000)
-#         self.motors.set_period_b(1000000)
-#         self.motors.set_period_c(1000000)
-#         self.motors.set_period_d(1000000)
+#         self.motors.set_all_duty(250000)
+#         self.motors.set_all_period(1000000)
 #         self.motors.set_motors_forward()
 
 #     def fetch_middle_sensor(self):

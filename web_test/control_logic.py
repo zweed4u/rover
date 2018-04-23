@@ -13,15 +13,8 @@ class ControlLogic:
         """
         #self.imu = IMU(1)  # 1 second calibration
         self.motor = Motor()
-        self.motor.set_duty_a(250000.)  # 500000 ticks - 5ms
-        self.motor.set_duty_b(250000.)  # 500000 ticks - 5ms
-        self.motor.set_duty_c(250000.)  # 500000 ticks - 5ms
-        self.motor.set_duty_d(250000.)  # 500000 ticks - 5ms
-        self.motor.set_period_a(1000000.)  # 1000000 ticks - 10ms
-        self.motor.set_period_b(1000000.)  # 1000000 ticks - 10ms
-        self.motor.set_period_c(1000000.)  # 1000000 ticks - 10ms
-        self.motor.set_period_d(1000000.)  # 1000000 ticks - 10ms
-
+        self.motor.set_all_duty(500000.)
+        self.motor.set_all_period(1000000.)
 
     def set_command(self, command_string):
         """
