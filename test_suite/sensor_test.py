@@ -76,4 +76,4 @@ while 1:
     print "middle sensor: {}cm".format(testB.fetch_b())
     print "left sensor: {}cm".format(testC.fetch_c())
     print ""
-    time.sleep(2)
+    time.sleep(.1)

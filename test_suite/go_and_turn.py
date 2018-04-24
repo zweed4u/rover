@@ -24,8 +24,6 @@ class IMUTest:
 
         # turn 75% of the way
         self.imu.get_degrees_turned(degrees*.25)
-        self.motors.disable_motor()
-        raw_input('')
 
         # slow down and turn the rest of the rotation
         self.motors.set_all_duty(120000)
@@ -34,4 +32,4 @@ class IMUTest:
 
 
 imuTest = IMUTest()
-imuTest.test_turn_left(-90.)
+imuTest.test_turn_left(90.)

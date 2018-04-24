@@ -11,8 +11,8 @@ class IMUTest:
         self.motors = Motor()
         self.motors.set_all_duty(500000)
         self.motors.set_all_period(1000000)
-        
-        self.motors.set_motors_for_right_turn()
+        # if positive degrees - left turn, negative degrees = right turn
+        self.motors.set_motors_for_left_turn()
         self.motors.enable_motors()
         # turn 75% of the way
         self.imu.get_degrees_turned(degrees*.20)
@@ -24,4 +24,4 @@ class IMUTest:
 
 
 imuTest = IMUTest()
-imuTest.test_turn_left(-90.)
+imuTest.test_turn_left(90.)
