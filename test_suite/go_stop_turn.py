@@ -2,21 +2,35 @@
 import time
 from imu import IMU
 from motor import Motor
+from sensor import Sensor
 
 
 class IMUTest:
     def __init__(self):
+        self.middle_distance_threshold_cm =  26.48
         self.imu = IMU(1)
         self.motors = Motor()
+        self.sensors = Sensor()
+        self.sensors.enable_all_sensors()
     
     def test_turn_left(self, degrees):
         self.motors.set_all_duty(500000)
         self.motors.set_all_period(1000000)
         self.motors.set_motors_forward()
         self.motors.enable_motors()
-        print "Forward for 1 second"
-        time.sleep(1)
+
+        while self.sensors.read_sensor_b() > self.middle_distance_threshold_cm:
+            self.motors.enable_motors()
+            if self.sensors.read_sensor_b() < 71.:
+                self.motors.set_all_duty(150000)
+            if self.sensors.read_sensor_b() < 51.:
+                self.motors.set_all_duty(100000)
+            # Still have enough distance between us and object in front
+            print "Object {}cm ahead!".format(self.sensors.read_sensor_b())
+            time.sleep(.05)
+
         self.motors.disable_motor()
+        self.motors.set_all_duty(500000)
         print "Disabled now setting left"
         self.motors.set_motors_for_left_turn()
         print "re-enabling and using imu"

@@ -26,3 +26,6 @@ class IMU:
         degrees_turned = self.c_imu.actuator(degrees_to_turn, self.bias)
         print "We turned {} degrees".format(degrees_turned)
         return degrees_turned
+
+    def get_readings(self):
+        return self.c_imu.get_current_wz_dps() - self.bias
