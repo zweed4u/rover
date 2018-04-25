@@ -5,7 +5,7 @@ from motor import Motor
 from sensor import Sensor
 
 
-class IMUTest:
+class GoStopBlindTurn:
     def __init__(self):
         self.middle_distance_threshold_cm =  26.48
         self.imu = IMU(1)
@@ -45,5 +45,5 @@ class IMUTest:
         self.motors.disable_motor()
 
 
-imuTest = IMUTest()
-imuTest.test_turn_left(90.)
+gsbt = GoStopBlindTurn()
+gsbt.test_turn_left(90.)

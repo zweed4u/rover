@@ -4,12 +4,12 @@ from imu import IMU
 from motor import Motor
 
 
-class IMUTest:
+class GoTurn:
     def __init__(self):
         self.imu = IMU(1)
         self.motors = Motor()
-    
-    def test_turn_left(self, degrees):
+
+    def go_and_turn(self, degrees):
         self.motors.set_all_duty(500000)
         self.motors.set_all_period(1000000)
         self.motors.set_motors_forward()
@@ -31,5 +31,5 @@ class IMUTest:
         self.motors.disable_motor()
 
 
-imuTest = IMUTest()
-imuTest.test_turn_left(90.)
+gat = GoTurn()
+gat.go_and_turn(90.)

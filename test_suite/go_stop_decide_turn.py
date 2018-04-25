@@ -5,7 +5,7 @@ from motor import Motor
 from sensor import Sensor
 
 
-class IMUTest:
+class GoAndDecide:
     def __init__(self):
         self.middle_distance_threshold_cm =  26.48
         self.imu = IMU(1)
@@ -13,7 +13,7 @@ class IMUTest:
         self.sensors = Sensor()
         self.sensors.enable_all_sensors()
     
-    def test_turn_left(self):
+    def go(self):
         self.motors.set_all_duty(500000)
         self.motors.set_all_period(1000000)
         self.motors.set_motors_forward()
@@ -64,5 +64,5 @@ class IMUTest:
         self.motors.disable_motor()
 
 
-imuTest = IMUTest()
-imuTest.test_turn_left()
+gad = GoAndDecide()
+gad.go()

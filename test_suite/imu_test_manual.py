@@ -3,6 +3,7 @@ import time
 from imu import IMU
 from motor import Motor
 
+
 class IMUTest:
     def __init__(self):
         self.imu = IMU(1)
@@ -26,7 +27,7 @@ class IMUTest:
         print min(moving_vals)
         self.new_bias = sum(moving_vals)/len(moving_vals)
 
-    def calibrate(self):
+    def calibrate_get_scale_factor(self):
         total = 0.0
         first_pass = 0
         while 1:
@@ -65,7 +66,7 @@ class IMUTest:
 
 
 imuTest = IMUTest()
-#imuTest.calibrate()
-# imuTest.fetch_vals()
-imuTest.fetch_moving_vals()
-imuTest.test_turn_left(90.)
+imuTest.calibrate_get_scale_factor()
+#imuTest.fetch_vals()
+#imuTest.fetch_moving_vals()
+#imuTest.test_turn_left(90.)

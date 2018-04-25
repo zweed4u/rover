@@ -1,10 +1,8 @@
 #!/usr/bin/python
 import time
-import threading
-from threading import Thread
-
 from motor import Motor
 from sensor import Sensor
+
 
 class PushPull:
     def __init__(self):
@@ -33,6 +31,7 @@ class PushPull:
                 print "Object {}cm ahead Backing up!".format(self.sensors.read_sensor_b())
                 time.sleep(.1)
             self.motors.disable_motor()
+
 
 pushPull = PushPull()
 pushPull.follow()
