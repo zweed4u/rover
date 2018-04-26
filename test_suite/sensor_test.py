@@ -59,21 +59,21 @@ class SensorC(SensorTest):
         return self.sensors.read_sensor_c()
 
 
-# t = SensorTest()
-# t.enable_all()
-# while 1:
-#     print t.fetch_all()
-#     time.sleep(1)
-
-testA = SensorA()
-testB = SensorB()
-testC = SensorC()
-testA.enable_a()
-testB.enable_b()
-testC.enable_c()
+t = SensorTest()
+t.enable_all()
 while 1:
-    print "right sensor: {}cm".format(testA.fetch_a())
-    print "middle sensor: {}cm".format(testB.fetch_b())
-    print "left sensor: {}cm".format(testC.fetch_c())
-    print ""
-    time.sleep(.1)
+    print t.fetch_all()
+    time.sleep(1)
+
+# testA = SensorA()
+# testB = SensorB()
+# testC = SensorC()
+# testA.enable_a()
+# testB.enable_b()
+# testC.enable_c()
+# while 1:
+#     print "right sensor: {}cm".format(testA.fetch_a())
+#     print "middle sensor: {}cm".format(testB.fetch_b())
+#     print "left sensor: {}cm".format(testC.fetch_c())
+#     print ""
+#     time.sleep(.1)

@@ -134,24 +134,28 @@ double actuator(float degrees_to_turn, float bias){
     void* imu = map + (ADDR_IMU & MAP_MASK);
     void* wz_dps = imu + WZ_DPS_OFFSET;
 
-    while (num_loops_passed <= 8000){  // while we've been turning for less than 8 seconds
+    while (abs(degrees_traveled) < abs(degrees_to_turn)){  // while we haven't turned 90 degrees
         if (num_loops_passed != 0){  // skip the first 1ms can't integrate single point
-            // riemann sum rectangles
             raw_imu_reading = *((uint32_t*)wz_dps);
             if (raw_imu_reading >  32767){ 
                 raw_imu_reading = -1 * (65536 - raw_imu_reading);
             }
-            //printf("%d\n", raw_imu_reading);
-            dps_reading_minus_bias = (raw_imu_reading/65.536) - bias;
-            //printf("%llu\n", get_current_us() - prev_proc_time);
-            delta_time_seconds = (get_current_us() - prev_proc_time)/1000000.0;
-            degrees_traveled += (dps_reading_minus_bias * delta_time_seconds);
-            //printf("%.6f\n", degrees_traveled);
+            //printf("%f\n", dps_reading_minus_bias);
+            dps_reading_minus_bias = (raw_imu_reading/65.536);
+
+            if (abs(dps_reading_minus_bias) < bias){
+                ;;
+            }
+            else{
+                //printf("%llu\n", get_current_us() - prev_proc_time);
+                delta_time_seconds = (get_current_us() - prev_proc_time)/1000000.0;
+                degrees_traveled += ((dps_reading_minus_bias-bias) * delta_time_seconds);
+                //printf("%.6f\n", degrees_traveled);
+            }
         }
-        if (abs(degrees_traveled) >= abs(degrees_to_turn)){  // determine if 90 degrees reached
-            break;
+        else{
+            num_loops_passed=1;
         }
-        num_loops_passed++;
         prev_proc_time = get_current_us();
         usleep(ONE_MS_IN_US);  // 1ms sleep
     }

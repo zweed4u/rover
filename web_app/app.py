@@ -28,13 +28,15 @@ def control():
         session['backward'] = form.backwards_button.data
         session['left'] = form.turn_left_button.data
         session['right'] = form.turn_right_button.data
-        #session['360'] = form.three_sixty_button.data
+        session['180'] = form.one_eighty_button.data
+        session['360'] = form.three_sixty_button.data
         
         command_map = {
             'straight': form.straight_button.data,
             'backward': form.backwards_button.data,
             'left': form.turn_left_button.data,
-            #'360': form.three_sixty_button.data,
+            '180': form.one_eighty_button.data,
+            '360': form.three_sixty_button.data,
             'right': form.turn_right_button.data
         }
         for key in command_map:
@@ -63,8 +65,9 @@ def submitted():
         'straight': session['straight'],
         'backward': session['backward'],
         'left': session['left'],
-        #'360': session['360']
-        'right': session['right'],
+        '180': session['180'],
+        '360': session['360'],
+        'right': session['right']
     }
     for key in command_map:
         if command_map[key]:

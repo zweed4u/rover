@@ -1,7 +1,5 @@
 #!/usr/bin/python
 import time
-from threading import Thread
-
 from imu import IMU
 from motor import Motor
 from sensor import Sensor

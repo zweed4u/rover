@@ -13,5 +13,6 @@ class ControlForm(FlaskForm):
     straight_button = SubmitField('Straight')
     turn_left_button = SubmitField('Turn left')
     turn_right_button = SubmitField('Turn right')
-    #three_sixty_button = SubmitField('360')
+    one_eighty_button = SubmitField('180')
+    three_sixty_button = SubmitField('360')
     backwards_button = SubmitField('Backwards')

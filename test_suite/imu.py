@@ -29,3 +29,6 @@ class IMU:
 
     def get_readings(self):
         return self.c_imu.get_current_wz_dps() - self.bias
+
+    def get_readings_without_bias(self):
+        return self.c_imu.get_current_wz_dps()
