@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Apr 26 17:50:40 2018
+# Process ID: 4804
+# Current directory: S:/4-19-21/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13600 S:\4-19-21\project\newfolder_sys.xpr
+# Log file: S:/4-19-21/project/vivado.log
+# Journal file: S:/4-19-21/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project S:/4-19-21/project/newfolder_sys.xpr
+update_compile_order -fileset sources_1
+open_bd_design {S:/4-19-21/src/design_1.bd}
+ipx::edit_ip_in_project -upgrade true -name pwm_generator_v4_0_project -directory S:/4-19-21/project/newfolder_sys.tmp/pwm_generator_v4_0_project s:/4-19-21/ip/pwm_generator/component.xml
+update_compile_order -fileset sources_1

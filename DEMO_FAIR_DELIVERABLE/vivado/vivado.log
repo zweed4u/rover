@@ -1,0 +1,1521 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Apr 26 17:34:13 2018
+# Process ID: 5088
+# Current directory: S:/4-19-21
+# Command line: vivado.exe -notrace -mode batch -source project.tcl
+# Log file: S:/4-19-21/vivado.log
+# Journal file: S:/4-19-21\vivado.jou
+#-----------------------------------------------------------
+source project.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 's:/4-19-21/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_processing_system7_0_0 
+Adding cell -- rit.edu:user:ultrasonic_sensor_axi:1.1 - ultrasonic_sensor_axi_0
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_ultrasonic_sensor_axi_0_0 
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_ps7_0_axi_periph_0 
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_rst_ps7_0_50M_0 
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Adding cell -- rit.edu:user:echo_pulse_measurer:1.1 - echo_pulse_measurer_0
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_echo_pulse_measurer_0_0 
+Adding cell -- rit.edu:user:echo_pulse_measurer:1.1 - echo_pulse_measurer_1
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_echo_pulse_measurer_1_0 
+Adding cell -- rit.edu:user:echo_pulse_measurer:1.1 - echo_pulse_measurer_2
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_echo_pulse_measurer_2_0 
+Adding cell -- rit.edu:user:motor_axi:1.2 - motor_axi_0
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_motor_axi_0_0 
+Adding cell -- xilinx.com:user:imu_wrapper:1.0 - imu_wrapper_0
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_imu_wrapper_0_0 
+Adding cell -- rit.edu:user:encoder_reader_top:1.1 - encoder_reader_top_0
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_encoder_reader_top_0_0 
+Adding cell -- rit.edu:user:encoder_reader_top:1.1 - encoder_reader_top_1
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_encoder_reader_top_1_0 
+Adding cell -- rit.edu:user:encoder_reader_top:1.1 - encoder_reader_top_2
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_encoder_reader_top_2_0 
+Adding cell -- rit.edu:user:encoder_reader_top:1.1 - encoder_reader_top_3
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_encoder_reader_top_3_0 
+Adding cell -- rit.edu:user:led_axi:1.1 - led_axi_0
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_led_axi_0_0 
+Adding cell -- rit.edu:user:led_error:3.0 - led_error_0
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_led_error_0_0 
+Adding cell -- rit.edu:user:led_error:3.0 - led_error_1
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_led_error_1_0 
+Adding cell -- rit.edu:user:led_error:3.0 - led_error_2
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_led_error_2_0 
+Adding cell -- rit.edu:user:pwm_generator:4.0 - pwm_generator_0
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_pwm_generator_0_0 
+Adding cell -- rit.edu:user:pwm_generator:4.0 - pwm_generator_1
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_pwm_generator_1_0 
+Adding cell -- rit.edu:user:pwm_generator:4.0 - pwm_generator_2
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_pwm_generator_2_0 
+Adding cell -- rit.edu:user:pwm_generator:4.0 - pwm_generator_3
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_pwm_generator_3_0 
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_xbar_0 
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_auto_pc_0 
+Successfully read diagram <design_1> from BD file <S:/4-19-21/src/design_1.bd>
+INFO: [BD 41-433] 
+Design successfully migrated to use XCI files...
+Wrote  : <S:/4-19-21/src/design_1.bd> 
+VHDL Output written to : S:/4-19-21/src/hdl/design_1.vhd
+VHDL Output written to : S:/4-19-21/src/hdl/design_1_wrapper.vhd
+make_wrapper: Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 469.234 ; gain = 207.008
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- rit.edu:user:ultrasonic_sensor_axi:1.1 - ultrasonic_sensor_axi_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding cell -- rit.edu:user:echo_pulse_measurer:1.1 - echo_pulse_measurer_0
+Adding cell -- rit.edu:user:echo_pulse_measurer:1.1 - echo_pulse_measurer_1
+Adding cell -- rit.edu:user:echo_pulse_measurer:1.1 - echo_pulse_measurer_2
+Adding cell -- rit.edu:user:motor_axi:1.2 - motor_axi_0
+Adding cell -- xilinx.com:user:imu_wrapper:1.0 - imu_wrapper_0
+Adding cell -- rit.edu:user:encoder_reader_top:1.1 - encoder_reader_top_0
+Adding cell -- rit.edu:user:encoder_reader_top:1.1 - encoder_reader_top_1
+Adding cell -- rit.edu:user:encoder_reader_top:1.1 - encoder_reader_top_2
+Adding cell -- rit.edu:user:encoder_reader_top:1.1 - encoder_reader_top_3
+Adding cell -- rit.edu:user:led_axi:1.1 - led_axi_0
+Adding cell -- rit.edu:user:led_error:3.0 - led_error_0
+Adding cell -- rit.edu:user:led_error:3.0 - led_error_1
+Adding cell -- rit.edu:user:led_error:3.0 - led_error_2
+Adding cell -- rit.edu:user:pwm_generator:4.0 - pwm_generator_0
+Adding cell -- rit.edu:user:pwm_generator:4.0 - pwm_generator_1
+Adding cell -- rit.edu:user:pwm_generator:4.0 - pwm_generator_2
+Adding cell -- rit.edu:user:pwm_generator:4.0 - pwm_generator_3
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <design_1> from BD file <S:/4-19-21/src/design_1.bd>
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : S:/4-19-21/src/hdl/design_1.vhd
+VHDL Output written to : S:/4-19-21/src/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ultrasonic_sensor_axi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block echo_pulse_measurer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block echo_pulse_measurer_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block echo_pulse_measurer_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block motor_axi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block imu_wrapper_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block encoder_reader_top_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block encoder_reader_top_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block encoder_reader_top_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block encoder_reader_top_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block led_axi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block led_error_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block led_error_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block led_error_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pwm_generator_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pwm_generator_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pwm_generator_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pwm_generator_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 's:/4-19-21/src/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file S:/4-19-21/src/hw_handoff/design_1.hwh
+Generated Block Design Tcl file S:/4-19-21/src/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File S:/4-19-21/src/hdl/design_1.hwdef
+[Thu Apr 26 17:35:05 2018] Launched design_1_auto_pc_0_synth_1, design_1_xbar_0_synth_1, design_1_pwm_generator_3_0_synth_1, design_1_pwm_generator_2_0_synth_1, design_1_pwm_generator_1_0_synth_1, design_1_pwm_generator_0_0_synth_1, design_1_led_error_2_0_synth_1, design_1_led_error_1_0_synth_1, design_1_led_error_0_0_synth_1, design_1_led_axi_0_0_synth_1, design_1_encoder_reader_top_3_0_synth_1, design_1_encoder_reader_top_2_0_synth_1, design_1_encoder_reader_top_1_0_synth_1, design_1_encoder_reader_top_0_0_synth_1, design_1_imu_wrapper_0_0_synth_1, design_1_motor_axi_0_0_synth_1, design_1_echo_pulse_measurer_2_0_synth_1, design_1_echo_pulse_measurer_1_0_synth_1, design_1_echo_pulse_measurer_0_0_synth_1, design_1_rst_ps7_0_50M_0_synth_1, design_1_ultrasonic_sensor_axi_0_0_synth_1, design_1_processing_system7_0_0_synth_1...
+Run output will be captured here:
+design_1_auto_pc_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_auto_pc_0_synth_1/runme.log
+design_1_xbar_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_xbar_0_synth_1/runme.log
+design_1_pwm_generator_3_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_pwm_generator_3_0_synth_1/runme.log
+design_1_pwm_generator_2_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_pwm_generator_2_0_synth_1/runme.log
+design_1_pwm_generator_1_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_pwm_generator_1_0_synth_1/runme.log
+design_1_pwm_generator_0_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_pwm_generator_0_0_synth_1/runme.log
+design_1_led_error_2_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_led_error_2_0_synth_1/runme.log
+design_1_led_error_1_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_led_error_1_0_synth_1/runme.log
+design_1_led_error_0_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_led_error_0_0_synth_1/runme.log
+design_1_led_axi_0_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_led_axi_0_0_synth_1/runme.log
+design_1_encoder_reader_top_3_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_encoder_reader_top_3_0_synth_1/runme.log
+design_1_encoder_reader_top_2_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_encoder_reader_top_2_0_synth_1/runme.log
+design_1_encoder_reader_top_1_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_encoder_reader_top_1_0_synth_1/runme.log
+design_1_encoder_reader_top_0_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_encoder_reader_top_0_0_synth_1/runme.log
+design_1_imu_wrapper_0_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_imu_wrapper_0_0_synth_1/runme.log
+design_1_motor_axi_0_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_motor_axi_0_0_synth_1/runme.log
+design_1_echo_pulse_measurer_2_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_echo_pulse_measurer_2_0_synth_1/runme.log
+design_1_echo_pulse_measurer_1_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_echo_pulse_measurer_1_0_synth_1/runme.log
+design_1_echo_pulse_measurer_0_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_echo_pulse_measurer_0_0_synth_1/runme.log
+design_1_rst_ps7_0_50M_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_rst_ps7_0_50M_0_synth_1/runme.log
+design_1_ultrasonic_sensor_axi_0_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_ultrasonic_sensor_axi_0_0_synth_1/runme.log
+design_1_processing_system7_0_0_synth_1: S:/4-19-21/project/newfolder_sys.runs/design_1_processing_system7_0_0_synth_1/runme.log
+[Thu Apr 26 17:35:05 2018] Launched synth_1...
+Run output will be captured here: S:/4-19-21/project/newfolder_sys.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:14 ; elapsed = 00:00:33 . Memory (MB): peak = 542.699 ; gain = 73.465
+[Thu Apr 26 17:35:05 2018] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log design_1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 's:/4-19-21/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+Command: synth_design -top design_1_wrapper -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4540 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 370.359 ; gain = 73.047
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [S:/4-19-21/project/newfolder_sys.srcs/sources_1/imports/hdl/design_1_wrapper.vhd:63]
+INFO: [Synth 8-3491] module 'design_1' declared at 'S:/4-19-21/src/hdl/design_1.vhd:1647' bound to instance 'design_1_i' of component 'design_1' [S:/4-19-21/project/newfolder_sys.srcs/sources_1/imports/hdl/design_1_wrapper.vhd:131]
+INFO: [Synth 8-638] synthesizing module 'design_1' [S:/4-19-21/src/hdl/design_1.vhd:1704]
+INFO: [Synth 8-3491] module 'design_1_echo_pulse_measurer_0_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_echo_pulse_measurer_0_0_stub.vhdl:5' bound to instance 'echo_pulse_measurer_0' of component 'design_1_echo_pulse_measurer_0_0' [S:/4-19-21/src/hdl/design_1.vhd:2304]
+INFO: [Synth 8-638] synthesizing module 'design_1_echo_pulse_measurer_0_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_echo_pulse_measurer_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'design_1_echo_pulse_measurer_1_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_echo_pulse_measurer_1_0_stub.vhdl:5' bound to instance 'echo_pulse_measurer_1' of component 'design_1_echo_pulse_measurer_1_0' [S:/4-19-21/src/hdl/design_1.vhd:2314]
+INFO: [Synth 8-638] synthesizing module 'design_1_echo_pulse_measurer_1_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_echo_pulse_measurer_1_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'design_1_echo_pulse_measurer_2_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_echo_pulse_measurer_2_0_stub.vhdl:5' bound to instance 'echo_pulse_measurer_2' of component 'design_1_echo_pulse_measurer_2_0' [S:/4-19-21/src/hdl/design_1.vhd:2324]
+INFO: [Synth 8-638] synthesizing module 'design_1_echo_pulse_measurer_2_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_echo_pulse_measurer_2_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'design_1_encoder_reader_top_0_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_encoder_reader_top_0_0_stub.vhdl:5' bound to instance 'encoder_reader_top_0' of component 'design_1_encoder_reader_top_0_0' [S:/4-19-21/src/hdl/design_1.vhd:2334]
+INFO: [Synth 8-638] synthesizing module 'design_1_encoder_reader_top_0_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_encoder_reader_top_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'design_1_encoder_reader_top_1_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_encoder_reader_top_1_0_stub.vhdl:5' bound to instance 'encoder_reader_top_1' of component 'design_1_encoder_reader_top_1_0' [S:/4-19-21/src/hdl/design_1.vhd:2343]
+INFO: [Synth 8-638] synthesizing module 'design_1_encoder_reader_top_1_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_encoder_reader_top_1_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'design_1_encoder_reader_top_2_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_encoder_reader_top_2_0_stub.vhdl:5' bound to instance 'encoder_reader_top_2' of component 'design_1_encoder_reader_top_2_0' [S:/4-19-21/src/hdl/design_1.vhd:2352]
+INFO: [Synth 8-638] synthesizing module 'design_1_encoder_reader_top_2_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_encoder_reader_top_2_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'design_1_encoder_reader_top_3_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_encoder_reader_top_3_0_stub.vhdl:5' bound to instance 'encoder_reader_top_3' of component 'design_1_encoder_reader_top_3_0' [S:/4-19-21/src/hdl/design_1.vhd:2361]
+INFO: [Synth 8-638] synthesizing module 'design_1_encoder_reader_top_3_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_encoder_reader_top_3_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'design_1_imu_wrapper_0_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_imu_wrapper_0_0_stub.vhdl:5' bound to instance 'imu_wrapper_0' of component 'design_1_imu_wrapper_0_0' [S:/4-19-21/src/hdl/design_1.vhd:2370]
+INFO: [Synth 8-638] synthesizing module 'design_1_imu_wrapper_0_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_imu_wrapper_0_0_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'design_1_led_axi_0_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_led_axi_0_0_stub.vhdl:5' bound to instance 'led_axi_0' of component 'design_1_led_axi_0_0' [S:/4-19-21/src/hdl/design_1.vhd:2400]
+INFO: [Synth 8-638] synthesizing module 'design_1_led_axi_0_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_led_axi_0_0_stub.vhdl:35]
+INFO: [Synth 8-3491] module 'design_1_led_error_0_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_led_error_0_0_stub.vhdl:5' bound to instance 'led_error_0' of component 'design_1_led_error_0_0' [S:/4-19-21/src/hdl/design_1.vhd:2427]
+INFO: [Synth 8-638] synthesizing module 'design_1_led_error_0_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_led_error_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_led_error_1_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_led_error_1_0_stub.vhdl:5' bound to instance 'led_error_1' of component 'design_1_led_error_1_0' [S:/4-19-21/src/hdl/design_1.vhd:2434]
+INFO: [Synth 8-638] synthesizing module 'design_1_led_error_1_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_led_error_1_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_led_error_2_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_led_error_2_0_stub.vhdl:5' bound to instance 'led_error_2' of component 'design_1_led_error_2_0' [S:/4-19-21/src/hdl/design_1.vhd:2441]
+INFO: [Synth 8-638] synthesizing module 'design_1_led_error_2_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_led_error_2_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_motor_axi_0_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_motor_axi_0_0_stub.vhdl:5' bound to instance 'motor_axi_0' of component 'design_1_motor_axi_0_0' [S:/4-19-21/src/hdl/design_1.vhd:2448]
+INFO: [Synth 8-638] synthesizing module 'design_1_motor_axi_0_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_motor_axi_0_0_stub.vhdl:53]
+INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [S:/4-19-21/src/hdl/design_1.vhd:2493]
+INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_processing_system7_0_0_stub.vhdl:76]
+INFO: [Synth 8-638] synthesizing module 'design_1_ps7_0_axi_periph_0' [S:/4-19-21/src/hdl/design_1.vhd:905]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_15SPJYW' [S:/4-19-21/src/hdl/design_1.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_15SPJYW' (1#1) [S:/4-19-21/src/hdl/design_1.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_XU9C55' [S:/4-19-21/src/hdl/design_1.vhd:172]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_XU9C55' (2#1) [S:/4-19-21/src/hdl/design_1.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_14WQB4R' [S:/4-19-21/src/hdl/design_1.vhd:283]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_14WQB4R' (3#1) [S:/4-19-21/src/hdl/design_1.vhd:283]
+INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_YFYJ3U' [S:/4-19-21/src/hdl/design_1.vhd:394]
+INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_YFYJ3U' (4#1) [S:/4-19-21/src/hdl/design_1.vhd:394]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_UYSKKA' [S:/4-19-21/src/hdl/design_1.vhd:524]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [S:/4-19-21/src/hdl/design_1.vhd:707]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_UYSKKA' (5#1) [S:/4-19-21/src/hdl/design_1.vhd:524]
+INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [S:/4-19-21/src/hdl/design_1.vhd:1542]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 'design_1_ps7_0_axi_periph_0' (6#1) [S:/4-19-21/src/hdl/design_1.vhd:905]
+INFO: [Synth 8-3491] module 'design_1_pwm_generator_0_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_pwm_generator_0_0_stub.vhdl:5' bound to instance 'pwm_generator_0' of component 'design_1_pwm_generator_0_0' [S:/4-19-21/src/hdl/design_1.vhd:2690]
+INFO: [Synth 8-638] synthesizing module 'design_1_pwm_generator_0_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_pwm_generator_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'design_1_pwm_generator_1_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_pwm_generator_1_0_stub.vhdl:5' bound to instance 'pwm_generator_1' of component 'design_1_pwm_generator_1_0' [S:/4-19-21/src/hdl/design_1.vhd:2701]
+INFO: [Synth 8-638] synthesizing module 'design_1_pwm_generator_1_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_pwm_generator_1_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'design_1_pwm_generator_2_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_pwm_generator_2_0_stub.vhdl:5' bound to instance 'pwm_generator_2' of component 'design_1_pwm_generator_2_0' [S:/4-19-21/src/hdl/design_1.vhd:2712]
+INFO: [Synth 8-638] synthesizing module 'design_1_pwm_generator_2_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_pwm_generator_2_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'design_1_pwm_generator_3_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_pwm_generator_3_0_stub.vhdl:5' bound to instance 'pwm_generator_3' of component 'design_1_pwm_generator_3_0' [S:/4-19-21/src/hdl/design_1.vhd:2723]
+INFO: [Synth 8-638] synthesizing module 'design_1_pwm_generator_3_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_pwm_generator_3_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_50M_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'design_1_rst_ps7_0_50M_0' [S:/4-19-21/src/hdl/design_1.vhd:2734]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_50M_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_ultrasonic_sensor_axi_0_0' declared at 'S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_ultrasonic_sensor_axi_0_0_stub.vhdl:5' bound to instance 'ultrasonic_sensor_axi_0' of component 'design_1_ultrasonic_sensor_axi_0_0' [S:/4-19-21/src/hdl/design_1.vhd:2747]
+INFO: [Synth 8-638] synthesizing module 'design_1_ultrasonic_sensor_axi_0_0' [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/realtime/design_1_ultrasonic_sensor_axi_0_0_stub.vhdl:41]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (7#1) [S:/4-19-21/src/hdl/design_1.vhd:1704]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:17657' bound to instance 'mpu9250_2_scl_iobuf' of component 'IOBUF' [S:/4-19-21/project/newfolder_sys.srcs/sources_1/imports/hdl/design_1_wrapper.vhd:182]
+INFO: [Synth 8-638] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:17657]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IOBUF' (8#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:17657]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:17657' bound to instance 'mpu9250_2_sda_iobuf' of component 'IOBUF' [S:/4-19-21/project/newfolder_sys.srcs/sources_1/imports/hdl/design_1_wrapper.vhd:189]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (9#1) [S:/4-19-21/project/newfolder_sys.srcs/sources_1/imports/hdl/design_1_wrapper.vhd:63]
+WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_YFYJ3U has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_YFYJ3U has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_YFYJ3U has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_YFYJ3U has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_14WQB4R has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_14WQB4R has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_14WQB4R has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_14WQB4R has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_XU9C55 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_XU9C55 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_XU9C55 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_XU9C55 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_15SPJYW has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_15SPJYW has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_15SPJYW has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_15SPJYW has unconnected port S_ARESETN
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 411.691 ; gain = 114.379
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 411.691 ; gain = 114.379
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc] for cell 'design_1_i/processing_system7_0'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc] for cell 'design_1_i/processing_system7_0'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp47/design_1_ultrasonic_sensor_axi_0_0_in_context.xdc] for cell 'design_1_i/ultrasonic_sensor_axi_0'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp47/design_1_ultrasonic_sensor_axi_0_0_in_context.xdc] for cell 'design_1_i/ultrasonic_sensor_axi_0'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp49/design_1_rst_ps7_0_50M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_50M'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp49/design_1_rst_ps7_0_50M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_50M'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp51/design_1_echo_pulse_measurer_0_0_in_context.xdc] for cell 'design_1_i/echo_pulse_measurer_0'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp51/design_1_echo_pulse_measurer_0_0_in_context.xdc] for cell 'design_1_i/echo_pulse_measurer_0'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp53/design_1_echo_pulse_measurer_1_0_in_context.xdc] for cell 'design_1_i/echo_pulse_measurer_1'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp53/design_1_echo_pulse_measurer_1_0_in_context.xdc] for cell 'design_1_i/echo_pulse_measurer_1'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp55/design_1_echo_pulse_measurer_2_0_in_context.xdc] for cell 'design_1_i/echo_pulse_measurer_2'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp55/design_1_echo_pulse_measurer_2_0_in_context.xdc] for cell 'design_1_i/echo_pulse_measurer_2'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp57/design_1_motor_axi_0_0_in_context.xdc] for cell 'design_1_i/motor_axi_0'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp57/design_1_motor_axi_0_0_in_context.xdc] for cell 'design_1_i/motor_axi_0'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp59/design_1_imu_wrapper_0_0_in_context.xdc] for cell 'design_1_i/imu_wrapper_0'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp59/design_1_imu_wrapper_0_0_in_context.xdc] for cell 'design_1_i/imu_wrapper_0'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp61/design_1_encoder_reader_top_0_0_in_context.xdc] for cell 'design_1_i/encoder_reader_top_0'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp61/design_1_encoder_reader_top_0_0_in_context.xdc] for cell 'design_1_i/encoder_reader_top_0'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp63/design_1_encoder_reader_top_1_0_in_context.xdc] for cell 'design_1_i/encoder_reader_top_1'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp63/design_1_encoder_reader_top_1_0_in_context.xdc] for cell 'design_1_i/encoder_reader_top_1'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp65/design_1_encoder_reader_top_2_0_in_context.xdc] for cell 'design_1_i/encoder_reader_top_2'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp65/design_1_encoder_reader_top_2_0_in_context.xdc] for cell 'design_1_i/encoder_reader_top_2'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp67/design_1_encoder_reader_top_3_0_in_context.xdc] for cell 'design_1_i/encoder_reader_top_3'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp67/design_1_encoder_reader_top_3_0_in_context.xdc] for cell 'design_1_i/encoder_reader_top_3'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp69/design_1_led_axi_0_0_in_context.xdc] for cell 'design_1_i/led_axi_0'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp69/design_1_led_axi_0_0_in_context.xdc] for cell 'design_1_i/led_axi_0'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp71/design_1_led_error_1_0_in_context.xdc] for cell 'design_1_i/led_error_0'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp71/design_1_led_error_1_0_in_context.xdc] for cell 'design_1_i/led_error_0'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp73/design_1_led_error_1_0_in_context.xdc] for cell 'design_1_i/led_error_1'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp73/design_1_led_error_1_0_in_context.xdc] for cell 'design_1_i/led_error_1'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp75/design_1_led_error_2_0_in_context.xdc] for cell 'design_1_i/led_error_2'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp75/design_1_led_error_2_0_in_context.xdc] for cell 'design_1_i/led_error_2'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp77/design_1_pwm_generator_0_0_in_context.xdc] for cell 'design_1_i/pwm_generator_0'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp77/design_1_pwm_generator_0_0_in_context.xdc] for cell 'design_1_i/pwm_generator_0'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp79/design_1_pwm_generator_1_0_in_context.xdc] for cell 'design_1_i/pwm_generator_1'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp79/design_1_pwm_generator_1_0_in_context.xdc] for cell 'design_1_i/pwm_generator_1'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp81/design_1_pwm_generator_2_0_in_context.xdc] for cell 'design_1_i/pwm_generator_2'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp81/design_1_pwm_generator_2_0_in_context.xdc] for cell 'design_1_i/pwm_generator_2'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp83/design_1_pwm_generator_3_0_in_context.xdc] for cell 'design_1_i/pwm_generator_3'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp83/design_1_pwm_generator_3_0_in_context.xdc] for cell 'design_1_i/pwm_generator_3'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp85/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/xbar'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp85/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/xbar'
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp87/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp87/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [S:/4-19-21/src/constraints.xdc]
+Finished Parsing XDC File [S:/4-19-21/src/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [S:/4-19-21/src/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [S:/4-19-21/project/newfolder_sys.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 681.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:27 . Memory (MB): peak = 681.434 ; gain = 384.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:27 . Memory (MB): peak = 681.434 ; gain = 384.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[0]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[0]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[10]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[10]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[11]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[11]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[12]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[12]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[13]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[13]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[14]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[14]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[1]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[1]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[2]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[2]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[3]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[3]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[4]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[4]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[5]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[5]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[6]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[6]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[7]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[7]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[8]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[8]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[9]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[9]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[0]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ba[0]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[1]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ba[1]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[2]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ba[2]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_cas_n. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_cas_n. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_cke. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_cke. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_cs_n. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_cs_n. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ck_p. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ck_p. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ck_n. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ck_n. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[0]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dm[0]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[1]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dm[1]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[2]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dm[2]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[3]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dm[3]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[0]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_p[0]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[1]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_p[1]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[2]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_p[2]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[3]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_p[3]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[0]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_n[0]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[1]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_n[1]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[2]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_n[2]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[3]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_n[3]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[0]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[0]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[10]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[10]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[11]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[11]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[12]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[12]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[13]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[13]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[14]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[14]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[15]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[15]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[16]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[16]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[17]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[17]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[18]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[18]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[19]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[19]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[1]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 94).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[1]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[20]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 96).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[20]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 97).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[21]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 98).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[21]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 99).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[22]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 100).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[22]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 101).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[23]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 102).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[23]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 103).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[24]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 104).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[24]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 105).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[25]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 106).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[25]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 107).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[26]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 108).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[26]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 109).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[27]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 110).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[27]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 111).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[28]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 112).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[28]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 113).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[29]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 114).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[29]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 115).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[2]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 116).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[2]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 117).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[30]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 118).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[30]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 119).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[31]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 120).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[31]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 121).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[3]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 122).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[3]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 123).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[4]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 124).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[4]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 125).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[5]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 126).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[5]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 127).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[6]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 128).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[6]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 129).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[7]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 130).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[7]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 131).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[8]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 132).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[8]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 133).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[9]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 134).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[9]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 135).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_reset_n. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 136).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_reset_n. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 137).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_odt. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 138).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_odt. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 139).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ras_n. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 140).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ras_n. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 141).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrn. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 142).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrn. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 143).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrp. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 144).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrp. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 145).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_we_n. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 146).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_we_n. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 147).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[0]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 148).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[0]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 149).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[10]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 150).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[10]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 151).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[11]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 152).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[11]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 153).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[12]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 154).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[12]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 155).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[13]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 156).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[13]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 157).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[14]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 158).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[14]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 159).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[15]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 160).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[15]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 161).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[16]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 162).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[16]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 163).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[17]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 164).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[17]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 165).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[18]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 166).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[18]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 167).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[19]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 168).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[19]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 169).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[1]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 170).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[1]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 171).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[20]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 172).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[20]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 173).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[21]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 174).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[21]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 175).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[22]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 176).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[22]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 177).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[23]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 178).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[23]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 179).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[24]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 180).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[24]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 181).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[25]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 182).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[25]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 183).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[26]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 184).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[26]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 185).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[27]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 186).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[27]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 187).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[28]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 188).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[28]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 189).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[29]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 190).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[29]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 191).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[2]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 192).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[2]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 193).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[30]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 194).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[30]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 195).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[31]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 196).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[31]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 197).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[32]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 198).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[32]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 199).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[33]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 200).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[33]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 201).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[34]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 202).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[34]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 203).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[35]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 204).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[35]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 205).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[36]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 206).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[36]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 207).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[37]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 208).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[37]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 209).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[38]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 210).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[38]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 211).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[39]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 212).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[39]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 213).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[3]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 214).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[3]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 215).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[40]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 216).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[40]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 217).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[41]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 218).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[41]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 219).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[42]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 220).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[42]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 221).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[43]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 222).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[43]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 223).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[44]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 224).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[44]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 225).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[45]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 226).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[45]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 227).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[46]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 228).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[46]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 229).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[47]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 230).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[47]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 231).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[48]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 232).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[48]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 233).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[49]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 234).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[49]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 235).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[4]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 236).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[4]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 237).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[50]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 238).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[50]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 239).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[51]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 240).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[51]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 241).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[52]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 242).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[52]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 243).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[53]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 244).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[53]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 245).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[5]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 246).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[5]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 247).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[6]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 248).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[6]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 249).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[7]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 250).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[7]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 251).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[8]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 252).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[8]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 253).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[9]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 254).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[9]. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 255).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_clk. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 256).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_clk. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 257).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 258).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 259).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 260).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  S:/4-19-21/project/newfolder_sys.runs/synth_1/.Xil/Vivado-13600-ECTET-1360-06/dcp45/design_1_processing_system7_0_0_in_context.xdc, line 261).
+Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/echo_pulse_measurer_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/echo_pulse_measurer_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/echo_pulse_measurer_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/encoder_reader_top_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/encoder_reader_top_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/encoder_reader_top_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/encoder_reader_top_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/imu_wrapper_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/led_axi_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/led_error_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/led_error_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/led_error_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/motor_axi_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/pwm_generator_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/pwm_generator_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/pwm_generator_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/pwm_generator_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/rst_ps7_0_50M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ultrasonic_sensor_axi_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:28 . Memory (MB): peak = 681.434 ; gain = 384.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:28 . Memory (MB): peak = 681.434 ; gain = 384.121
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M02_ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M03_ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M03_ARESETN
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 681.434 ; gain = 384.121
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/processing_system7_0/FCLK_CLK0' to pin 'design_1_i/processing_system7_0/bbstub_FCLK_CLK0/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:37 . Memory (MB): peak = 681.434 ; gain = 384.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:37 . Memory (MB): peak = 681.434 ; gain = 384.121
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:37 . Memory (MB): peak = 681.434 ; gain = 384.121
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:37 . Memory (MB): peak = 681.434 ; gain = 384.121
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:37 . Memory (MB): peak = 681.434 ; gain = 384.121
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:37 . Memory (MB): peak = 681.434 ; gain = 384.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:37 . Memory (MB): peak = 681.434 ; gain = 384.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:37 . Memory (MB): peak = 681.434 ; gain = 384.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:38 . Memory (MB): peak = 681.434 ; gain = 384.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------------------+----------+
+|      |BlackBox name                      |Instances |
++------+-----------------------------------+----------+
+|1     |design_1_xbar_0                    |         1|
+|2     |design_1_auto_pc_0                 |         1|
+|3     |design_1_echo_pulse_measurer_0_0   |         1|
+|4     |design_1_echo_pulse_measurer_1_0   |         1|
+|5     |design_1_echo_pulse_measurer_2_0   |         1|
+|6     |design_1_encoder_reader_top_0_0    |         1|
+|7     |design_1_encoder_reader_top_1_0    |         1|
+|8     |design_1_encoder_reader_top_2_0    |         1|
+|9     |design_1_encoder_reader_top_3_0    |         1|
+|10    |design_1_imu_wrapper_0_0           |         1|
+|11    |design_1_led_axi_0_0               |         1|
+|12    |design_1_led_error_0_0             |         1|
+|13    |design_1_led_error_1_0             |         1|
+|14    |design_1_led_error_2_0             |         1|
+|15    |design_1_motor_axi_0_0             |         1|
+|16    |design_1_processing_system7_0_0    |         1|
+|17    |design_1_pwm_generator_0_0         |         1|
+|18    |design_1_pwm_generator_1_0         |         1|
+|19    |design_1_pwm_generator_2_0         |         1|
+|20    |design_1_pwm_generator_3_0         |         1|
+|21    |design_1_rst_ps7_0_50M_0           |         1|
+|22    |design_1_ultrasonic_sensor_axi_0_0 |         1|
++------+-----------------------------------+----------+
+
+Report Cell Usage: 
++------+----------------------------------------+------+
+|      |Cell                                    |Count |
++------+----------------------------------------+------+
+|1     |design_1_auto_pc_0_bbox                 |     1|
+|2     |design_1_echo_pulse_measurer_0_0_bbox   |     1|
+|3     |design_1_echo_pulse_measurer_1_0_bbox   |     1|
+|4     |design_1_echo_pulse_measurer_2_0_bbox   |     1|
+|5     |design_1_encoder_reader_top_0_0_bbox    |     1|
+|6     |design_1_encoder_reader_top_1_0_bbox    |     1|
+|7     |design_1_encoder_reader_top_2_0_bbox    |     1|
+|8     |design_1_encoder_reader_top_3_0_bbox    |     1|
+|9     |design_1_imu_wrapper_0_0_bbox           |     1|
+|10    |design_1_led_axi_0_0_bbox               |     1|
+|11    |design_1_led_error_0_0_bbox             |     1|
+|12    |design_1_led_error_1_0_bbox             |     1|
+|13    |design_1_led_error_2_0_bbox             |     1|
+|14    |design_1_motor_axi_0_0_bbox             |     1|
+|15    |design_1_processing_system7_0_0_bbox    |     1|
+|16    |design_1_pwm_generator_0_0_bbox         |     1|
+|17    |design_1_pwm_generator_1_0_bbox         |     1|
+|18    |design_1_pwm_generator_2_0_bbox         |     1|
+|19    |design_1_pwm_generator_3_0_bbox         |     1|
+|20    |design_1_rst_ps7_0_50M_0_bbox           |     1|
+|21    |design_1_ultrasonic_sensor_axi_0_0_bbox |     1|
+|22    |design_1_xbar_0_bbox                    |     1|
+|23    |IBUF                                    |     7|
+|24    |IOBUF                                   |     2|
+|25    |OBUF                                    |    14|
++------+----------------------------------------+------+
+
+Report Instance Areas: 
++------+---------------------+----------------------------+------+
+|      |Instance             |Module                      |Cells |
++------+---------------------+----------------------------+------+
+|1     |top                  |                            |  1615|
+|2     |  design_1_i         |design_1                    |  1592|
+|3     |    ps7_0_axi_periph |design_1_ps7_0_axi_periph_0 |   662|
+|4     |      s00_couplers   |s00_couplers_imp_UYSKKA     |   177|
++------+---------------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:38 . Memory (MB): peak = 681.434 ; gain = 384.121
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 681.434 ; gain = 114.379
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:38 . Memory (MB): peak = 681.434 ; gain = 384.121
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+83 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:51 . Memory (MB): peak = 681.434 ; gain = 390.813
+INFO: [Common 17-1381] The checkpoint 'S:/4-19-21/project/newfolder_sys.runs/synth_1/design_1_wrapper.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 681.434 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 26 17:38:36 2018...
+[Thu Apr 26 17:38:43 2018] synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:01 ; elapsed = 00:03:37 . Memory (MB): peak = 542.699 ; gain = 0.000
+[Thu Apr 26 17:38:46 2018] Launched impl_1...
+Run output will be captured here: S:/4-19-21/project/newfolder_sys.runs/impl_1/runme.log
+[Thu Apr 26 17:38:46 2018] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log design_1_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 's:/4-19-21/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+CRITICAL WARNING: [filemgmt 20-1440] File 's:/4-19-21/src/ip/design_1_imu_wrapper_0_0/imu.edn' already exists in the project as a part of sub-design file 'S:/4-19-21/src/ip/design_1_imu_wrapper_0_0/design_1_imu_wrapper_0_0.xci'. Explicitly adding the file outside the scope of the sub-design can lead to unintended behaviors and is not recommended.
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_echo_pulse_measurer_0_0/design_1_echo_pulse_measurer_0_0.dcp' for cell 'design_1_i/echo_pulse_measurer_0'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_echo_pulse_measurer_1_0/design_1_echo_pulse_measurer_1_0.dcp' for cell 'design_1_i/echo_pulse_measurer_1'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_echo_pulse_measurer_2_0/design_1_echo_pulse_measurer_2_0.dcp' for cell 'design_1_i/echo_pulse_measurer_2'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_encoder_reader_top_0_0/design_1_encoder_reader_top_0_0.dcp' for cell 'design_1_i/encoder_reader_top_0'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_encoder_reader_top_1_0/design_1_encoder_reader_top_1_0.dcp' for cell 'design_1_i/encoder_reader_top_1'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_encoder_reader_top_2_0/design_1_encoder_reader_top_2_0.dcp' for cell 'design_1_i/encoder_reader_top_2'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_encoder_reader_top_3_0/design_1_encoder_reader_top_3_0.dcp' for cell 'design_1_i/encoder_reader_top_3'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_imu_wrapper_0_0/design_1_imu_wrapper_0_0.dcp' for cell 'design_1_i/imu_wrapper_0'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_led_axi_0_0/design_1_led_axi_0_0.dcp' for cell 'design_1_i/led_axi_0'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_led_error_0_0/design_1_led_error_0_0.dcp' for cell 'design_1_i/led_error_0'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_led_error_1_0/design_1_led_error_1_0.dcp' for cell 'design_1_i/led_error_1'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_led_error_2_0/design_1_led_error_2_0.dcp' for cell 'design_1_i/led_error_2'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_motor_axi_0_0/design_1_motor_axi_0_0.dcp' for cell 'design_1_i/motor_axi_0'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_pwm_generator_0_0/design_1_pwm_generator_0_0.dcp' for cell 'design_1_i/pwm_generator_0'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_pwm_generator_1_0/design_1_pwm_generator_1_0.dcp' for cell 'design_1_i/pwm_generator_1'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_pwm_generator_2_0/design_1_pwm_generator_2_0.dcp' for cell 'design_1_i/pwm_generator_2'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_pwm_generator_3_0/design_1_pwm_generator_3_0.dcp' for cell 'design_1_i/pwm_generator_3'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.dcp' for cell 'design_1_i/rst_ps7_0_50M'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_ultrasonic_sensor_axi_0_0/design_1_ultrasonic_sensor_axi_0_0.dcp' for cell 'design_1_i/ultrasonic_sensor_axi_0'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 's:/4-19-21/src/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+INFO: [Netlist 29-17] Analyzing 323 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-35] Removing redundant IBUF, design_1_i/imu_wrapper_0/U0/imu_blackbox_i/m00_iic_scl_i_IBUF_inst, from the path connected to top-level port: mpu9250_2_scl_io 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-35] Removing redundant IBUF, design_1_i/imu_wrapper_0/U0/imu_blackbox_i/m00_iic_sda_i_IBUF_inst, from the path connected to top-level port: mpu9250_2_sda_io 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_aclk_IBUF_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_araddr_IBUF[0]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_araddr_IBUF[1]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_araddr_IBUF[2]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_araddr_IBUF[3]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_araddr_IBUF[4]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_araddr_IBUF[5]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_araddr_IBUF[6]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_araddr_IBUF[7]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_aresetn_IBUF_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_arprot_IBUF[0]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_arprot_IBUF[1]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_arprot_IBUF[2]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_arvalid_IBUF_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_awaddr_IBUF[0]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_awaddr_IBUF[1]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_awaddr_IBUF[2]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_awaddr_IBUF[3]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_awaddr_IBUF[4]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_awaddr_IBUF[5]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_awaddr_IBUF[6]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_awaddr_IBUF[7]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_awprot_IBUF[0]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_awprot_IBUF[1]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_awprot_IBUF[2]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_awvalid_IBUF_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_bready_IBUF_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rready_IBUF_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[0]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[10]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[11]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[12]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[13]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[14]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[15]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[16]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[17]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[18]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[19]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[1]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[20]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[21]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[22]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[23]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[24]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[25]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[26]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[27]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[28]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[29]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[2]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[30]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[31]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[3]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[4]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[5]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[6]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[7]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[8]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wdata_IBUF[9]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wstrb_IBUF[0]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wstrb_IBUF[1]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wstrb_IBUF[2]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wstrb_IBUF[3]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wvalid_IBUF_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[16]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/m00_iic_scl_o_OBUF_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/m00_iic_scl_t_OBUF_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[17]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/m00_iic_sda_o_OBUF_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/m00_iic_sda_t_OBUF_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[18]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[19]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[1]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_wready_OBUF_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[20]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[21]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[22]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[23]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[24]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[25]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[26]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[27]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[28]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_arready_OBUF_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[29]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[2]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[30]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[31]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[3]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[4]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[5]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[6]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[7]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[8]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[9]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rvalid_OBUF_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_awready_OBUF_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rresp_OBUF[0]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rresp_OBUF[1]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_bresp_OBUF[0]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_bresp_OBUF[1]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_bvalid_OBUF_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[0]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[10]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[11]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[12]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[13]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[14]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. design_1_i/imu_wrapper_0/U0/imu_blackbox_i/s00_axi_rdata_OBUF[15]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+Parsing XDC File [s:/4-19-21/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [s:/4-19-21/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [s:/4-19-21/src/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [s:/4-19-21/src/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [s:/4-19-21/src/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [s:/4-19-21/src/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [S:/4-19-21/src/constraints.xdc]
+Finished Parsing XDC File [S:/4-19-21/src/constraints.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+link_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 589.805 ; gain = 299.156
+CRITICAL WARNING: [Pfi 67-13] Hardware Handoff file imu_blackbox.hwdef does not exist for instance design_1_i/imu_wrapper_0/U0/imu_blackbox_i/imu_blackbox_i
+INFO: [Chipscope 16-241] No debug cores found in the current design.
+Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
+or use the create_debug_core and connect_debug_core Tcl commands to insert debug cores into the design.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010-clg400'
+Command: report_drc (run_mandatory_drcs) for: incr_eco_checks
+INFO: [DRC 23-27] Running DRC with 2 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+Command: report_drc (run_mandatory_drcs) for: placer_checks
+INFO: [DRC 23-27] Running DRC with 2 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 599.453 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: ef059187
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 599.453 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1100.184 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 127f67b12
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1105.227 ; gain = 505.773
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: a44147a3
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1105.227 ; gain = 505.773
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: a44147a3
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1105.227 ; gain = 505.773
+Phase 1 Placer Initialization | Checksum: a44147a3
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1105.227 ; gain = 505.773
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: ba7a9321
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1105.227 ; gain = 505.773
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: ba7a9321
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1105.227 ; gain = 505.773
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1112fb5f8
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 1105.227 ; gain = 505.773
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: d9db2b29
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1105.227 ; gain = 505.773
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 153f61015
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1105.227 ; gain = 505.773
+
+Phase 3.5 Timing Path Optimizer
+Phase 3.5 Timing Path Optimizer | Checksum: ef2612fa
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1105.227 ; gain = 505.773
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: f599d7e7
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1105.227 ; gain = 505.773
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 19a7a5d93
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1105.227 ; gain = 505.773
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 19a7a5d93
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1105.227 ; gain = 505.773
+Phase 3 Detail Placement | Checksum: 19a7a5d93
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 1105.227 ; gain = 505.773
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 214bdd7c4
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Place 46-41] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 214bdd7c4
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1105.227 ; gain = 505.773
+INFO: [Place 30-746] Post Placement Timing Summary WNS=13.188. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 260b76427
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1105.227 ; gain = 505.773
+Phase 4.1 Post Commit Optimization | Checksum: 260b76427
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1105.227 ; gain = 505.773
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 260b76427
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1105.227 ; gain = 505.773
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 260b76427
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1105.227 ; gain = 505.773
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: 26187f767
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1105.227 ; gain = 505.773
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 26187f767
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1105.227 ; gain = 505.773
+Ending Placer Task | Checksum: 17fec8198
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1105.227 ; gain = 505.773
+48 Infos, 112 Warnings, 2 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1105.227 ; gain = 515.422
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1105.633 ; gain = 0.406
+INFO: [Common 17-1381] The checkpoint 'S:/4-19-21/project/newfolder_sys.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 1106.020 ; gain = 0.387
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1106.020 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1106.020 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010-clg400'
+Running DRC as a precondition to command route_design
+Command: report_drc (run_mandatory_drcs) for: router_checks
+INFO: [DRC 23-27] Running DRC with 2 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: b02b0426 ConstDB: 0 ShapeSum: cfc17d72 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 38834ba1
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1182.359 ; gain = 66.738
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 38834ba1
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1182.359 ; gain = 66.738
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 38834ba1
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1182.359 ; gain = 66.738
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 38834ba1
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1182.359 ; gain = 66.738
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 218e6b1c3
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1182.359 ; gain = 66.738
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=13.377 | TNS=0.000  | WHS=-0.145 | THS=-34.483|
+
+Phase 2 Router Initialization | Checksum: 1b6005aeb
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1182.359 ; gain = 66.738
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1cf488962
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 1182.359 ; gain = 66.738
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 266
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=12.110 | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 204bc4739
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1182.359 ; gain = 66.738
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=12.110 | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 1b78d3c06
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1182.359 ; gain = 66.738
+Phase 4 Rip-up And Reroute | Checksum: 1b78d3c06
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1182.359 ; gain = 66.738
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 1b78d3c06
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1182.359 ; gain = 66.738
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1b78d3c06
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1182.359 ; gain = 66.738
+Phase 5 Delay and Skew Optimization | Checksum: 1b78d3c06
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1182.359 ; gain = 66.738
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: ffa1e722
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1182.359 ; gain = 66.738
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=12.110 | TNS=0.000  | WHS=0.028  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1ce76c04a
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1182.359 ; gain = 66.738
+Phase 6 Post Hold Fix | Checksum: 1ce76c04a
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 1182.359 ; gain = 66.738
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 1.57798 %
+  Global Horizontal Routing Utilization  = 2.18658 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 1bf25dc1f
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 1182.359 ; gain = 66.738
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1bf25dc1f
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 1182.359 ; gain = 66.738
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 121a1a723
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 1182.359 ; gain = 66.738
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=12.110 | TNS=0.000  | WHS=0.028  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 121a1a723
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 1182.359 ; gain = 66.738
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 1182.359 ; gain = 66.738
+
+Routing Is Done.
+61 Infos, 112 Warnings, 2 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 1182.359 ; gain = 76.340
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1182.359 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'S:/4-19-21/project/newfolder_sys.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
+Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file S:/4-19-21/project/newfolder_sys.runs/impl_1/design_1_wrapper_drc_routed.rpt.
+report_drc completed successfully
+Command: report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -rpx design_1_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file S:/4-19-21/project/newfolder_sys.runs/impl_1/design_1_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+Command: report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+68 Infos, 112 Warnings, 2 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Command: write_bitstream -force design_1_wrapper.bit -bin_file
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010-clg400'
+Running DRC as a precondition to command write_bitstream
+Command: report_drc (run_mandatory_drcs) for: bitstream_checks
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC PDRC-153] Gated clock check: Net design_1_i/imu_wrapper_0/U0/imu_blackbox_i/imu_blackbox_i/sensor_interface_v1_0_0/inst/sensor_interface_v1_0_S00_AXI_inst/E[0] is a gated clock net sourced by a combinational pin design_1_i/imu_wrapper_0/U0/imu_blackbox_i/imu_blackbox_i/sensor_interface_v1_0_0/inst/sensor_interface_v1_0_S00_AXI_inst/mm_rdata_reg[15]_i_2/O, cell design_1_i/imu_wrapper_0/U0/imu_blackbox_i/imu_blackbox_i/sensor_interface_v1_0_0/inst/sensor_interface_v1_0_S00_AXI_inst/mm_rdata_reg[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC RTSTAT-10] No routable loads: 1894 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/processing_system7_0/inst/CAN0_PHY_TX, design_1_i/processing_system7_0/inst/CAN1_PHY_TX, design_1_i/processing_system7_0/inst/DMA0_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA0_DAVALID, design_1_i/processing_system7_0/inst/DMA0_DRREADY, design_1_i/processing_system7_0/inst/DMA0_RSTN, design_1_i/processing_system7_0/inst/DMA1_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA1_DAVALID, design_1_i/processing_system7_0/inst/DMA1_DRREADY, design_1_i/processing_system7_0/inst/DMA1_RSTN, design_1_i/processing_system7_0/inst/DMA2_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA2_DAVALID, design_1_i/processing_system7_0/inst/DMA2_DRREADY, design_1_i/processing_system7_0/inst/DMA2_RSTN, design_1_i/processing_system7_0/inst/DMA3_DATYPE[1:0]... and (the first 15 of 988 listed).
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 2 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Project 1-821] Please set project.enableDesignId to be 'true'.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./design_1_wrapper.bit...
+Writing bitstream ./design_1_wrapper.bin...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+77 Infos, 114 Warnings, 2 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 1582.723 ; gain = 356.238
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 26 17:40:18 2018...
+[Thu Apr 26 17:40:21 2018] impl_1 finished
+wait_on_run: Time (s): cpu = 00:00:01 ; elapsed = 00:01:35 . Memory (MB): peak = 542.699 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 26 17:40:21 2018...

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Apr 26 17:34:13 2018
+# Process ID: 5088
+# Current directory: S:/4-19-21
+# Command line: vivado.exe -notrace -mode batch -source project.tcl
+# Log file: S:/4-19-21/vivado.log
+# Journal file: S:/4-19-21\vivado.jou
+#-----------------------------------------------------------
+source project.tcl -notrace
